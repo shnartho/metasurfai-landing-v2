@@ -15,7 +15,9 @@ const Header: React.FC = () => {
             <a href="#roadmap" className="text-gray-300 hover:text-white transition-colors duration-300">Roadmap</a>
           </nav>
           <a
-            href="#"
+            href="https://app.metasurfai.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-6 py-2 text-white font-semibold rounded-full bg-gradient-to-r from-sky-500 to-purple-600 hover:from-sky-400 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-[0_0_15px_rgba(56,189,248,0.6)] hover:shadow-[0_0_25px_rgba(56,189,248,0.8)]"
           >
             Launch App

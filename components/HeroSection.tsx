@@ -34,13 +34,17 @@ const HeroSection: React.FC = () => {
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#"
+            href="https://app.metasurfai.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-4 text-white font-bold rounded-full bg-gradient-to-r from-sky-500 to-purple-600 hover:from-sky-400 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(56,189,248,0.7)] hover:shadow-[0_0_30px_rgba(56,189,248,0.9)]"
           >
             Launch App
           </a>
           <a
-            href="#"
+            href="https://whitepaper.metasurfai.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-4 text-white font-semibold rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
           >
             View Whitepaper
