@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { DiscordIcon, TelegramIcon, XIcon } from './icons/SocialIcons';
 
@@ -12,7 +11,12 @@ const CommunitySection: React.FC = () => {
         Join our growing community to stay updated, participate in governance, and shape the future of advertising.
       </p>
       <div className="flex items-center justify-center gap-4 sm:gap-6">
-        <a href="#" className="flex items-center gap-3 px-6 py-3 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+        <a 
+          href="https://discord.gg/D2pwuVC3zf" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="flex items-center gap-3 px-6 py-3 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+        >
           <DiscordIcon />
           <span className="font-semibold">Join Discord</span>
         </a>
