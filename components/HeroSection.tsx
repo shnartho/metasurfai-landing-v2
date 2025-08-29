@@ -71,14 +71,18 @@ const HeroSection: React.FC = () => {
           </Text3DEffect>
           
           <div 
-            className="mt-8 text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto animate-fadeInUp"
+            className="mt-8 text-lg md:text-2xl text-gray-300 max-w-4xl mx-auto animate-fadeInUp"
             style={{
               textShadow: '0 0 15px rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.8)',
               animationDelay: '0.5s'
             }}
           >
-            The Future of Decentralized, AI-Powered Advertising. <br />
-            <span className="text-cyan-300 font-semibold">Engage, Earn, and Grow in the Web3 Ecosystem.</span>
+            Revolutionizing the <span className="text-yellow-300 font-bold">$1.2 Trillion</span> Advertising Industry. <br />
+            <span className="text-cyan-300 font-semibold">Where Users Earn, Advertisers Win, and Everyone Profits.</span>
+            <br />
+            <span className="text-purple-300 font-medium text-lg">
+              Join the Web3 advertising revolution that rewards engagement.
+            </span>
           </div>
           
           <div 
@@ -132,7 +136,7 @@ const HeroSection: React.FC = () => {
         </div>
       </section>
       
-      <style jsx>{`
+      <style>{`
         @keyframes metasurfGlow {
           0% {
             text-shadow: 

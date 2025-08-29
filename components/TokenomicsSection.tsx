@@ -4,53 +4,65 @@ import { ChevronRightIcon } from './icons/UtilIcons';
 
 const TokenomicsSection: React.FC = () => {
   return (
-    <section id="tokenomics" className="relative">
+    <section id="tokenomics" className="relative py-24">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="absolute top-1/3 left-1/6 w-80 h-80 bg-gradient-to-r from-sky-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse"
+          className="absolute top-1/3 left-1/6 w-80 h-80 bg-gradient-to-r from-pink-500/10 to-rose-500/10 rounded-full blur-3xl animate-pulse"
           style={{
             animation: 'float 12s ease-in-out infinite'
           }}
         />
         <div
-          className="absolute bottom-1/3 right-1/6 w-72 h-72 bg-gradient-to-l from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-1/3 right-1/6 w-72 h-72 bg-gradient-to-l from-red-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse"
           style={{
             animation: 'float-reverse 15s ease-in-out infinite',
             animationDelay: '3s'
           }}
         />
+        
+        {/* Floating particles */}
+        {Array.from({ length: 20 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-pink-400/40 rounded-full animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${Math.random() * 8 + 4}s`
+            }}
+          />
+        ))}
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           className="text-center mb-16 animate-fadeInUp"
         >
+          <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-rose-500/20 to-pink-500/20 border border-rose-400/30 mb-6">
+            <span className="text-rose-300 font-semibold text-sm uppercase tracking-wide">Token Economy</span>
+          </div>
+          
           <h2 
-            className="text-4xl md:text-5xl font-extrabold mb-4 animate-titleGlow text-sky-400"
+            className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-rose-200 to-pink-400"
             style={{
-              color: '#38bdf8',
-              animation: 'titleFloat 6s ease-in-out infinite, titleGlow 3s ease-in-out infinite',
-              textShadow: `
-                2px 2px 0px #1e293b,
-                4px 4px 8px rgba(0, 0, 0, 0.8),
-                0 0 20px rgba(56, 189, 248, 0.5)
-              `,
-              filter: 'drop-shadow(0 0 15px rgba(56, 189, 248, 0.6))',
-              transform: 'perspective(1500px) rotateX(20deg) rotateY(-5deg) translateZ(80px)',
-              letterSpacing: '1px',
-              fontWeight: '900',
+              textShadow: '0 0 40px rgba(244,63,94,0.8), 4px 4px 12px rgba(0,0,0,0.8)',
+              filter: 'drop-shadow(0 0 20px rgba(244,63,94,0.6))',
             }}
           >
             MSAI Tokenomics
           </h2>
+          
           <p 
-            className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto"
+            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
             style={{
-              textShadow: '0 0 10px rgba(255,255,255,0.2)'
+              textShadow: '0 0 20px rgba(255,255,255,0.3)'
             }}
           >
-            The MSAI token is the lifeblood of the MetaSurfAI ecosystem, designed for utility and sustainable growth.
+            The MSAI token is the lifeblood of the MetaSurfAI ecosystem, designed for utility and sustainable growth. <br />
+            <span className="text-pink-300 font-bold">Built for rewards</span>, <span className="text-rose-300 font-bold">powered by utility</span>, 
+            and <span className="text-red-300 font-bold">driven by scarcity</span>.
           </p>
         </div>
 
@@ -62,18 +74,18 @@ const TokenomicsSection: React.FC = () => {
           >
             {/* Outer rotating ring */}
             <div 
-              className="absolute w-full h-full border-4 border-dashed border-sky-500/40 rounded-full"
+              className="absolute w-full h-full border-4 border-dashed border-rose-500/40 rounded-full"
               style={{
-                filter: 'drop-shadow(0 0 20px rgba(56, 189, 248, 0.5))',
+                filter: 'drop-shadow(0 0 20px rgba(244, 63, 94, 0.5))',
                 animation: 'rotate-slow 30s linear infinite'
               }}
             />
             
             {/* Inner rotating ring */}
             <div 
-              className="absolute w-64 h-64 border-4 border-dashed border-purple-500/40 rounded-full"
+              className="absolute w-64 h-64 border-4 border-dashed border-pink-500/40 rounded-full"
               style={{
-                filter: 'drop-shadow(0 0 15px rgba(168, 85, 247, 0.5))',
+                filter: 'drop-shadow(0 0 15px rgba(236, 72, 153, 0.5))',
                 animation: 'rotate-reverse 25s linear infinite'
               }}
             />
@@ -82,69 +94,69 @@ const TokenomicsSection: React.FC = () => {
             <div 
               className="absolute top-0 left-1/2 -translate-x-1/2 -mt-8 text-center hover:scale-110 transition-transform duration-300"
               style={{
-                filter: 'drop-shadow(0 0 10px rgba(56, 189, 248, 0.7))',
+                filter: 'drop-shadow(0 0 10px rgba(244, 63, 94, 0.7))',
               }}
             >
               <div 
-                className="w-28 p-3 bg-sky-900/70 border-2 border-sky-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-sky-400 hover:bg-sky-800/90 transition-all duration-300"
+                className="w-28 p-3 bg-rose-900/70 border-2 border-rose-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-rose-400 hover:bg-rose-800/90 transition-all duration-300"
                 style={{
-                  boxShadow: '0 0 25px rgba(56, 189, 248, 0.4)'
+                  boxShadow: '0 0 25px rgba(244, 63, 94, 0.4)'
                 }}
               >
                 Earn
               </div>
-              <ChevronRightIcon className="w-6 h-6 absolute top-full left-1/2 -translate-x-1/2 mt-2 text-sky-400 rotate-90" />
+              <ChevronRightIcon className="w-6 h-6 absolute top-full left-1/2 -translate-x-1/2 mt-2 text-rose-400 rotate-90" />
             </div>
 
             <div 
               className="absolute right-0 top-1/2 -translate-y-1/2 -mr-8 text-center hover:scale-110 transition-transform duration-300"
               style={{
-                filter: 'drop-shadow(0 0 10px rgba(168, 85, 247, 0.7))',
+                filter: 'drop-shadow(0 0 10px rgba(236, 72, 153, 0.7))',
               }}
             >
               <div 
-                className="w-28 p-3 bg-purple-900/70 border-2 border-purple-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-purple-400 hover:bg-purple-800/90 transition-all duration-300"
+                className="w-28 p-3 bg-pink-900/70 border-2 border-pink-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-pink-400 hover:bg-pink-800/90 transition-all duration-300"
                 style={{
-                  boxShadow: '0 0 25px rgba(168, 85, 247, 0.4)'
+                  boxShadow: '0 0 25px rgba(236, 72, 153, 0.4)'
                 }}
               >
                 Spend
               </div>
-              <ChevronRightIcon className="w-6 h-6 absolute right-full top-1/2 -translate-y-1/2 mr-2 text-purple-400" />
+              <ChevronRightIcon className="w-6 h-6 absolute right-full top-1/2 -translate-y-1/2 mr-2 text-pink-400" />
             </div>
 
             <div 
               className="absolute bottom-0 left-1/2 -translate-x-1/2 -mb-8 text-center hover:scale-110 transition-transform duration-300"
               style={{
-                filter: 'drop-shadow(0 0 10px rgba(56, 189, 248, 0.7))',
+                filter: 'drop-shadow(0 0 10px rgba(244, 63, 94, 0.7))',
               }}
             >
               <div 
-                className="w-28 p-3 bg-sky-900/70 border-2 border-sky-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-sky-400 hover:bg-sky-800/90 transition-all duration-300"
+                className="w-28 p-3 bg-rose-900/70 border-2 border-rose-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-rose-400 hover:bg-rose-800/90 transition-all duration-300"
                 style={{
-                  boxShadow: '0 0 25px rgba(56, 189, 248, 0.4)'
+                  boxShadow: '0 0 25px rgba(244, 63, 94, 0.4)'
                 }}
               >
                 Burn
               </div>
-              <ChevronRightIcon className="w-6 h-6 absolute bottom-full left-1/2 -translate-x-1/2 mb-2 text-sky-400 -rotate-90" />
+              <ChevronRightIcon className="w-6 h-6 absolute bottom-full left-1/2 -translate-x-1/2 mb-2 text-rose-400 -rotate-90" />
             </div>
 
             <div 
               className="absolute left-0 top-1/2 -translate-y-1/2 -ml-8 text-center hover:scale-110 transition-transform duration-300"
               style={{
-                filter: 'drop-shadow(0 0 10px rgba(168, 85, 247, 0.7))',
+                filter: 'drop-shadow(0 0 10px rgba(236, 72, 153, 0.7))',
               }}
             >
               <div 
-                className="w-28 p-3 bg-purple-900/70 border-2 border-purple-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-purple-400 hover:bg-purple-800/90 transition-all duration-300"
+                className="w-28 p-3 bg-pink-900/70 border-2 border-pink-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-pink-400 hover:bg-pink-800/90 transition-all duration-300"
                 style={{
-                  boxShadow: '0 0 25px rgba(168, 85, 247, 0.4)'
+                  boxShadow: '0 0 25px rgba(236, 72, 153, 0.4)'
                 }}
               >
                 Value Growth
               </div>
-              <ChevronRightIcon className="w-6 h-6 absolute left-full top-1/2 -translate-y-1/2 ml-2 text-purple-400 rotate-180" />
+              <ChevronRightIcon className="w-6 h-6 absolute left-full top-1/2 -translate-y-1/2 ml-2 text-pink-400 rotate-180" />
             </div>
 
             {/* Central hub */}
@@ -153,15 +165,15 @@ const TokenomicsSection: React.FC = () => {
               style={{
                 background: `
                   radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%),
-                  linear-gradient(45deg, rgba(56,189,248,0.1), rgba(168,85,247,0.1))
+                  linear-gradient(45deg, rgba(244,63,94,0.1), rgba(236,72,153,0.1))
                 `,
                 animation: 'glow-pulse 3s ease-in-out infinite'
               }}
             >
               <div 
-                className="text-5xl font-bold text-sky-400 mb-2"
+                className="text-5xl font-bold text-rose-400 mb-2"
                 style={{
-                  textShadow: '0 0 20px rgba(56, 189, 248, 0.8)'
+                  textShadow: '0 0 20px rgba(244, 63, 94, 0.8)'
                 }}
               >
                 MSAI
@@ -176,13 +188,13 @@ const TokenomicsSection: React.FC = () => {
             style={{
               background: `
                 linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%),
-                radial-gradient(circle at 30% 30%, rgba(56,189,248,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 70%, rgba(168,85,247,0.1) 0%, transparent 50%)
+                radial-gradient(circle at 30% 30%, rgba(244,63,94,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(236,72,153,0.1) 0%, transparent 50%)
               `,
               boxShadow: `
                 0 20px 40px rgba(0,0,0,0.3),
                 inset 0 1px 0 rgba(255,255,255,0.3),
-                0 0 20px rgba(56,189,248,0.1)
+                0 0 20px rgba(244,63,94,0.1)
               `,
               animationDelay: '0.3s'
             }}
@@ -191,7 +203,7 @@ const TokenomicsSection: React.FC = () => {
               className="animate-fadeInUp"
               style={{ animationDelay: '0.5s' }}
             >
-              <p className="text-sm text-sky-400 font-semibold">Total Supply</p>
+              <p className="text-sm text-rose-400 font-semibold">Total Supply</p>
               <p 
                 className="text-3xl font-bold text-white"
                 style={{
@@ -203,13 +215,13 @@ const TokenomicsSection: React.FC = () => {
               <p className="text-xs text-gray-400">Built on Solana Layer 1 for speed and low fees.</p>
             </div>
 
-            <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+            <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-rose-400/30 to-transparent"></div>
 
             <div
               className="animate-fadeInUp"
               style={{ animationDelay: '0.7s' }}
             >
-              <p className="text-sm text-purple-400 font-semibold mb-3">Core Use Cases</p>
+              <p className="text-sm text-pink-400 font-semibold mb-3">Core Use Cases</p>
               <ul className="space-y-2 text-gray-300">
                 {[
                   "Viewer rewards for ad engagement",
@@ -222,20 +234,20 @@ const TokenomicsSection: React.FC = () => {
                     className="flex items-start animate-slideInLeft"
                     style={{ animationDelay: `${0.8 + index * 0.1}s` }}
                   >
-                    <span className="text-sky-400 mr-3 mt-1 text-lg">&#x2713;</span>
+                    <span className="text-rose-400 mr-3 mt-1 text-lg">&#x2713;</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+            <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-rose-400/30 to-transparent"></div>
 
             <div
               className="animate-fadeInUp"
               style={{ animationDelay: '1.2s' }}
             >
-              <p className="text-sm text-sky-400 font-semibold">Scarcity Mechanism</p>
+              <p className="text-sm text-rose-400 font-semibold">Scarcity Mechanism</p>
               <p 
                 className="text-xl font-bold text-white my-2"
                 style={{
@@ -250,7 +262,7 @@ const TokenomicsSection: React.FC = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes gradientFlow {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }

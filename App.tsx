@@ -2,11 +2,14 @@
 import React, { Suspense } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-import DifferencesSection from './components/DifferencesSection';
-import FeaturesSection from './components/FeaturesSection';
+import IndustryStatsSection from './components/IndustryStatsSection';
+import TrustedBySection from './components/TrustedBySection';
+import LiveMetricsSection from './components/LiveMetricsSection';
+import MarketComparisonSection from './components/MarketComparisonSection';
+
 import TokenomicsSection from './components/TokenomicsSection';
 import RoadmapSection from './components/RoadmapSection';
-import CommunitySection from './components/CommunitySection';
+import InvestmentCTASection from './components/InvestmentCTASection';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -229,25 +232,33 @@ const App: React.FC = () => {
           <HeroSection />
         </Suspense>
         
+        <div className="animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
+          <MarketComparisonSection />
+        </div>
+        
+        <div className="animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
+          <IndustryStatsSection />
+        </div>
+        
+        <div className="animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
+          <TrustedBySection />
+        </div>
+        
+        <div className="animate-fadeInUp" style={{ animationDelay: '0.35s' }}>
+          <LiveMetricsSection />
+        </div>
+        
         <div className="px-4 md:px-8 max-w-7xl mx-auto space-y-32 md:space-y-40 py-32 md:py-40">
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
-            <DifferencesSection />
-          </div>
-          
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
-            <FeaturesSection />
-          </div>
-          
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
+          <div className="animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
             <TokenomicsSection />
           </div>
           
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
+          <div className="animate-fadeInUp" style={{ animationDelay: '0.7s' }}>
             <RoadmapSection />
           </div>
           
-          <div className="animate-fadeInUp" style={{ animationDelay: '0.5s' }}>
-            <CommunitySection />
+          <div className="animate-fadeInUp" style={{ animationDelay: '0.75s' }}>
+            <InvestmentCTASection />
           </div>
         </div>
         

@@ -93,23 +93,23 @@ const DifferenceCard: React.FC<DifferenceCardProps> = ({ icon, title, descriptio
 const differences = [
   {
     icon: <TokenIcon />,
-    title: 'Viewers Earn Tokens',
-    description: 'Instead of skipping ads, viewers are rewarded with MSAI tokens for their engagement, creating a positive feedback loop.',
+    title: 'Users Actually Earn Money',
+    description: 'Unlike traditional ads where only platforms profit, MetaSurfAI shares revenue with viewers through MSAI tokens - turning ad engagement into passive income.',
   },
   {
     icon: <PayPerActionIcon />,
-    title: 'Pay-Per-Action Engagement',
-    description: 'Advertisers only pay for measurable actions and conversions, ensuring maximum ROI and eliminating wasteful spending.',
+    title: 'Guaranteed ROI for Advertisers',
+    description: 'Pay only for genuine actions and conversions, not fake views or bot traffic. Our blockchain verification ensures every dollar spent drives real results.',
   },
   {
     icon: <CrossPlatformIcon />,
-    title: 'One-Click Cross-Platform Campaigns',
-    description: 'Seamlessly launch campaigns across YouTube, Twitch, TikTok, VR/AR, and digital billboards from a single dashboard.',
+    title: 'One Platform, All Channels',
+    description: 'Reach audiences across YouTube, Twitch, TikTok, VR/AR platforms, and digital billboards from a single dashboard - no more juggling multiple ad platforms.',
   },
   {
     icon: <BlockchainIcon />,
-    title: 'Blockchain Verification & Anti-Fraud',
-    description: 'All ad interactions are verified on-chain, providing transparent, immutable data and protecting against fraud.',
+    title: 'Fraud-Proof Transparency',
+    description: 'Every ad interaction is recorded on-chain, providing immutable proof of engagement and eliminating the $84 billion lost annually to ad fraud.',
   },
 ];
 
@@ -137,6 +137,10 @@ const DifferencesSection: React.FC = () => {
         <div 
           className="text-center mb-16 animate-fadeInUp"
         >
+          <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-400/30 mb-6">
+            <span className="text-purple-300 font-semibold text-sm uppercase tracking-wide">Revolutionary Approach</span>
+          </div>
+          
           <h2 
             className="text-4xl md:text-5xl font-extrabold mb-4 animate-titleGlow text-sky-400"
             style={{
@@ -153,15 +157,17 @@ const DifferencesSection: React.FC = () => {
               fontWeight: '900',
             }}
           >
-            What Makes MetaSurfAI Different?
+            Breaking the Advertising Status Quo
           </h2>
           <p 
-            className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto"
+            className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto"
             style={{
               textShadow: '0 0 10px rgba(255,255,255,0.2)'
             }}
           >
-            We are revolutionizing the advertising industry by shifting power from corporations to creators and consumers.
+            While Google earns <span className="text-yellow-300 font-bold">$307B</span> and Meta earns <span className="text-blue-300 font-bold">$134B</span> from advertising, 
+            users get nothing. <br />
+            <span className="text-cyan-300 font-semibold">MetaSurfAI changes this forever by sharing value with everyone.</span>
           </p>
         </div>
 
@@ -178,7 +184,7 @@ const DifferencesSection: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes gradientShift {
           0% { background: linear-gradient(45deg, rgba(56,189,248,0.1), rgba(168,85,247,0.1)); }
           33% { background: linear-gradient(45deg, rgba(168,85,247,0.1), rgba(16,185,129,0.1)); }
