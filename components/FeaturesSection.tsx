@@ -59,16 +59,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, ind
         {icon}
       </div>
       
-      <h3 
-        className="text-xl font-bold text-white mb-3"
-        style={{
-          textShadow: '0 0 5px rgba(255,255,255,0.15), 2px 2px 4px rgba(0,0,0,0.8)'
-        }}
-      >
-        {title}
-      </h3>
-      
-      <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
+          <h3 
+            className="text-xl font-bold text-white mb-2"
+            style={{
+              textShadow: '0 0 5px rgba(255,255,255,0.15), 2px 2px 4px rgba(0,0,0,0.8)'
+            }}
+          >
+            {title}
+          </h3>      <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
     </div>
 
     {/* Corner highlight */}
@@ -89,7 +87,7 @@ const features = [
 
 const FeaturesSection: React.FC = () => {
   return (
-    <section id="features" className="relative py-24">
+    <section id="features" className="relative py-12">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -109,7 +107,7 @@ const FeaturesSection: React.FC = () => {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
-          className="text-center mb-16 animate-fadeInUp"
+          className="text-center mb-12 animate-fadeInUp"
         >
           <h2 
             className="text-4xl md:text-5xl font-extrabold mb-4 animate-titleGlow text-sky-400"
@@ -131,7 +129,7 @@ const FeaturesSection: React.FC = () => {
             Platform Features
           </h2>
           <p 
-            className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto"
+            className="mt-3 text-lg text-gray-400 max-w-2xl mx-auto"
             style={{
               textShadow: '0 0 10px rgba(255,255,255,0.2)'
             }}

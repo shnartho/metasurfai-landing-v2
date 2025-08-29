@@ -59,7 +59,7 @@ const comparisons = [
 
 const MarketComparisonSection: React.FC = () => {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/5 w-80 h-80 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-full blur-3xl animate-pulse" />
@@ -68,13 +68,13 @@ const MarketComparisonSection: React.FC = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         {/* Section header */}
-        <div className="text-center mb-20 animate-fadeInUp">
+        <div className="text-center mb-12 animate-fadeInUp">
           <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-red-500/20 to-green-500/20 border border-orange-400/30 mb-6">
             <span className="text-orange-300 font-semibold text-sm uppercase tracking-wide">Market Disruption</span>
           </div>
           
           <h2 
-            className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-orange-200 to-green-400"
+            className="text-4xl md:text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-orange-200 to-green-400"
             style={{
               textShadow: '0 0 20px rgba(251,146,60,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
               filter: 'drop-shadow(0 0 10px rgba(251,146,60,0.3))',
@@ -91,8 +91,6 @@ const MarketComparisonSection: React.FC = () => {
               textShadow: '0 0 10px rgba(255,255,255,0.15)'
             }}
           >
-            Modern advertising is broken. 
-            <span className="text-cyan-300 font-bold"> Web3 advertising</span> fixes these problems.
           </p>
         </div>
 

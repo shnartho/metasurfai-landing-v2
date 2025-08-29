@@ -248,7 +248,7 @@ const App: React.FC = () => {
           <TrustedBySection />
         </div>
         
-        <div className="px-4 md:px-8 max-w-7xl mx-auto space-y-32 md:space-y-40 py-32 md:py-40">
+        <div className="px-4 md:px-8 max-w-7xl mx-auto space-y-16 md:space-y-20 py-16 md:py-20">
           <div className="animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
             <TokenomicsSection />
           </div>

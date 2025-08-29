@@ -60,7 +60,7 @@ const StatCard: React.FC<StatCardProps> = ({ number, label, description, index, 
       </div>
       
       <h3 
-        className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300"
+        className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300"
         style={{
           textShadow: '0 0 8px rgba(255,255,255,0.15)'
         }}
@@ -77,36 +77,9 @@ const StatCard: React.FC<StatCardProps> = ({ number, label, description, index, 
   </div>
 );
 
-const industryStats = [
-  {
-    number: '$1.2T',
-    label: 'Global Ad Market 2024',
-    description: 'The global advertising industry is worth over $1.2 trillion and growing at 8.2% annually',
-    gradient: 'radial-gradient(circle at 30% 30%, rgba(56,189,248,0.25) 0%, transparent 70%)'
-  },
-  {
-    number: '500M+',
-    label: 'Active Ad Watchers',
-    description: 'MetaSurfAI connects over 500 million users worldwide who are ready to engage with quality advertising content',
-    gradient: 'radial-gradient(circle at 30% 30%, rgba(168,85,247,0.25) 0%, transparent 70%)'
-  },
-  {
-    number: '85%',
-    label: 'Ad Engagement Rate',
-    description: 'Our incentivized model achieves 85% genuine engagement vs 2-5% traditional ad engagement rates',
-    gradient: 'radial-gradient(circle at 30% 30%, rgba(16,185,129,0.25) 0%, transparent 70%)'
-  },
-  {
-    number: '2,500+',
-    label: 'Enterprise Partners',
-    description: 'Leading Fortune 500 companies and innovative startups trust MetaSurfAI for their advertising campaigns',
-    gradient: 'radial-gradient(circle at 30% 30%, rgba(251,191,36,0.25) 0%, transparent 70%)'
-  }
-];
-
 const IndustryStatsSection: React.FC = () => {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-float" />
@@ -129,7 +102,7 @@ const IndustryStatsSection: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-
+        {/* Content removed */}
       </div>
 
       <style>{`

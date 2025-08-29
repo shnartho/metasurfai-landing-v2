@@ -91,7 +91,7 @@ const companies = [
 
 const TrustedBySection: React.FC = () => {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/6 w-80 h-80 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse" />
@@ -114,13 +114,13 @@ const TrustedBySection: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Section header */}
-        <div className="text-center mb-20 animate-fadeInUp">
+        <div className="text-center mb-12 animate-fadeInUp">
           <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 mb-6">
             <span className="text-emerald-300 font-semibold text-sm uppercase tracking-wide">Industry Leaders</span>
           </div>
           
           <h2 
-            className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-emerald-200 to-cyan-400"
+            className="text-4xl md:text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-emerald-200 to-cyan-400"
             style={{
               textShadow: '0 0 20px rgba(16,185,129,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
               filter: 'drop-shadow(0 0 10px rgba(16,185,129,0.3))',
@@ -133,7 +133,7 @@ const TrustedBySection: React.FC = () => {
         </div>
 
         {/* Companies grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           {companies.map((company, index) => (
             <CompanyLogo 
               key={index}

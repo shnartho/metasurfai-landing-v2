@@ -189,7 +189,7 @@ const liveMetrics = [
     description: 'Projected annual revenue at 10% market capture with our model',
     trend: '+∞%',
     trendColor: 'green',
-    icon: '�',
+    icon: '🚀',
     formatter: (num: number) => num.toString()
   },
   {
@@ -206,7 +206,7 @@ const liveMetrics = [
 
 const LiveMetricsSection: React.FC = () => {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/3 w-96 h-96 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-full blur-3xl animate-pulse" />
@@ -229,7 +229,7 @@ const LiveMetricsSection: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Section header */}
-        <div className="text-center mb-20 animate-fadeInUp">
+        <div className="text-center mb-12 animate-fadeInUp">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-green-500/20 to-cyan-500/20 border border-green-400/30 mb-6">
             <div className="relative">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-ping absolute"></div>
@@ -239,18 +239,16 @@ const LiveMetricsSection: React.FC = () => {
           </div>
           
           <h2 
-            className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-green-200 to-cyan-400"
+            className="text-4xl md:text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-green-200 to-cyan-400"
             style={{
               textShadow: '0 0 20px rgba(34,197,94,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
               filter: 'drop-shadow(0 0 10px rgba(34,197,94,0.3))',
+              transform: 'perspective(1000px) rotateX(10deg)',
+              animation: 'float 8s ease-in-out infinite'
             }}
           >
             Real-Time Impact
           </h2>
-          
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Global advertising market data and MetaSurfAI's revolutionary potential to transform how users earn from digital engagement
-          </p>
         </div>
 
         {/* Metrics grid */}
@@ -291,6 +289,12 @@ const LiveMetricsSection: React.FC = () => {
             opacity: 0;
             transform: translateY(100vh);
           }
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          33% { transform: translateY(-15px) rotate(2deg); }
+          66% { transform: translateY(-8px) rotate(-1deg); }
         }
         
         @keyframes fadeInUp {

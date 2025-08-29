@@ -2,7 +2,7 @@ import React from 'react';
 
 const InvestmentCTASection: React.FC = () => {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
       {/* Dramatic background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-900/20 via-cyan-900/20 to-emerald-900/20" />
@@ -28,9 +28,9 @@ const InvestmentCTASection: React.FC = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
         {/* Main heading */}
-        <div className="animate-fadeInUp mb-12">
+        <div className="animate-fadeInUp mb-8">
           <h2 
-            className="text-5xl md:text-7xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 via-orange-300 to-red-400"
+            className="text-5xl md:text-7xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 via-orange-300 to-red-400"
             style={{
               textShadow: '0 0 25px rgba(251,191,36,0.5), 6px 6px 15px rgba(0,0,0,0.9)',
               filter: 'drop-shadow(0 0 12px rgba(251,191,36,0.4))',
@@ -40,37 +40,31 @@ const InvestmentCTASection: React.FC = () => {
           >
             Don't Miss the Next Google
           </h2>
-          
-          <p className="text-2xl md:text-3xl text-gray-300 font-semibold mb-8">
-            Early Google investors made <span className="text-green-400 font-bold">5,000x returns</span>. <br />
-            Early Meta investors made <span className="text-blue-400 font-bold">3,000x returns</span>. <br />
-            <span className="text-yellow-400 font-bold text-4xl">What will MetaSurfAI investors make?</span>
-          </p>
         </div>
 
         {/* Investment stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30">
-            <div className="text-5xl mb-4">📈</div>
-            <div className="text-3xl font-bold text-green-300 mb-2">8.2%</div>
-            <div className="text-gray-300">Annual advertising market growth</div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
+          <div className="p-8 rounded-3xl bg-gradient-to-br from-purple-500/20 to-indigo-500/20 border border-purple-400/30">
+            <div className="text-5xl mb-4">🪙</div>
+            <div className="text-3xl font-bold text-purple-300 mb-2">Pre-ICO</div>
+            <div className="text-gray-300">Initial Coin Offering launch</div>
           </div>
           
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-400/30">
-            <div className="text-5xl mb-4">💎</div>
-            <div className="text-3xl font-bold text-yellow-300 mb-2">Early Stage</div>
-            <div className="text-gray-300">Ground floor opportunity in Web3 ads</div>
+          <div className="p-8 rounded-3xl bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-400/30">
+            <div className="text-5xl mb-4">🤝</div>
+            <div className="text-3xl font-bold text-blue-300 mb-2">Exceptional</div>
+            <div className="text-gray-300">Strategic partnerships secured</div>
           </div>
           
-          <div className="p-8 rounded-3xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-purple-400/30">
-            <div className="text-5xl mb-4">🚀</div>
-            <div className="text-3xl font-bold text-purple-300 mb-2">Proven Model</div>
-            <div className="text-gray-300">$47M monthly revenue already</div>
+          <div className="p-8 rounded-3xl bg-gradient-to-br from-emerald-500/20 to-green-500/20 border border-emerald-400/30">
+            <div className="text-5xl mb-4">⚡</div>
+            <div className="text-3xl font-bold text-emerald-300 mb-2">Innovation</div>
+            <div className="text-gray-300">Cutting-edge Web3 technology</div>
           </div>
         </div>
 
         {/* Urgency message */}
-        <div className="mb-12 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
+        <div className="mb-8 animate-fadeInUp" style={{ animationDelay: '0.6s' }}>
           <div className="inline-block p-6 rounded-2xl bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30">
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="text-4xl animate-bounce">⏰</div>
@@ -84,7 +78,7 @@ const InvestmentCTASection: React.FC = () => {
         </div>
 
         {/* CTA buttons */}
-        <div className="flex flex-col items-center justify-center gap-8 mb-16 animate-fadeInUp" style={{ animationDelay: '0.9s' }}>
+        <div className="flex flex-col items-center justify-center gap-8 mb-12 animate-fadeInUp" style={{ animationDelay: '0.9s' }}>
           {/* Main action buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a

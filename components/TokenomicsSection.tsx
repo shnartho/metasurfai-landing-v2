@@ -4,7 +4,7 @@ import { ChevronRightIcon } from './icons/UtilIcons';
 
 const TokenomicsSection: React.FC = () => {
   return (
-    <section id="tokenomics" className="relative py-24">
+    <section id="tokenomics" className="relative py-12">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -38,32 +38,23 @@ const TokenomicsSection: React.FC = () => {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
-          className="text-center mb-16 animate-fadeInUp"
+          className="text-center mb-12 animate-fadeInUp"
         >
           <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-rose-500/20 to-pink-500/20 border border-rose-400/30 mb-6">
             <span className="text-rose-300 font-semibold text-sm uppercase tracking-wide">Token Economy</span>
           </div>
           
           <h2 
-            className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-rose-200 to-pink-400"
+            className="text-4xl md:text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-rose-200 to-pink-400"
             style={{
               textShadow: '0 0 20px rgba(244,63,94,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
               filter: 'drop-shadow(0 0 10px rgba(244,63,94,0.3))',
+              transform: 'perspective(1000px) rotateX(10deg)',
+              animation: 'float 8s ease-in-out infinite'
             }}
           >
             MSAI Tokenomics
           </h2>
-          
-          <p 
-            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
-            style={{
-              textShadow: '0 0 10px rgba(255,255,255,0.15)'
-            }}
-          >
-            The MSAI token is the lifeblood of the MetaSurfAI ecosystem, designed for utility and sustainable growth. <br />
-            <span className="text-pink-300 font-bold">Built for rewards</span>, <span className="text-rose-300 font-bold">powered by utility</span>, 
-            and <span className="text-red-300 font-bold">driven by scarcity</span>.
-          </p>
         </div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
@@ -304,8 +295,9 @@ const TokenomicsSection: React.FC = () => {
         }
         
         @keyframes float {
-          0%, 100% { transform: translateY(0px) scale(1); }
-          50% { transform: translateY(-20px) scale(1.1); }
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          33% { transform: translateY(-15px) rotate(2deg); }
+          66% { transform: translateY(-8px) rotate(-1deg); }
         }
         
         @keyframes float-reverse {
