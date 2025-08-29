@@ -11,10 +11,10 @@
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "@react-three/fiber": "^8.15.11",
-    "@react-three/drei": "^9.88.17",
-    "three": "^0.157.0",
-    "framer-motion": "^10.16.16"
+    "@react-three/fiber": "^9.3.0",
+    "@react-three/drei": "^10.7.4",
+    "three": "^0.159.0",
+    "framer-motion": "^12.23.12"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
