@@ -76,8 +76,10 @@ const MarketComparisonSection: React.FC = () => {
           <h2 
             className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-orange-200 to-green-400"
             style={{
-              textShadow: '0 0 40px rgba(251,146,60,0.8), 4px 4px 12px rgba(0,0,0,0.8)',
-              filter: 'drop-shadow(0 0 20px rgba(251,146,60,0.6))',
+              textShadow: '0 0 20px rgba(251,146,60,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
+              filter: 'drop-shadow(0 0 10px rgba(251,146,60,0.3))',
+              transform: 'perspective(1000px) rotateX(10deg)',
+              animation: 'float 8s ease-in-out infinite'
             }}
           >
             Old vs New Advertising
@@ -86,7 +88,7 @@ const MarketComparisonSection: React.FC = () => {
           <p 
             className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
             style={{
-              textShadow: '0 0 20px rgba(255,255,255,0.3)'
+              textShadow: '0 0 10px rgba(255,255,255,0.15)'
             }}
           >
             Modern advertising is broken. 
@@ -132,6 +134,12 @@ const MarketComparisonSection: React.FC = () => {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          33% { transform: translateY(-15px) rotate(2deg); }
+          66% { transform: translateY(-8px) rotate(-1deg); }
         }
         
         .animate-fadeInUp {

@@ -62,7 +62,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, ind
       <h3 
         className="text-xl font-bold text-white mb-3"
         style={{
-          textShadow: '0 0 10px rgba(255,255,255,0.3), 2px 2px 4px rgba(0,0,0,0.8)'
+          textShadow: '0 0 5px rgba(255,255,255,0.15), 2px 2px 4px rgba(0,0,0,0.8)'
         }}
       >
         {title}
@@ -115,11 +115,12 @@ const FeaturesSection: React.FC = () => {
             className="text-4xl md:text-5xl font-extrabold mb-4 animate-titleGlow text-sky-400"
             style={{
               color: '#38bdf8',
-              animation: 'titleFloat 6s ease-in-out infinite, titleGlow 3s ease-in-out infinite',
+              animation: 'titleFloat 6s ease-in-out infinite, titleGlow 3s ease-in-out infinite, float 8s ease-in-out infinite',
               textShadow: `
                 2px 2px 0px #1e293b,
                 4px 4px 8px rgba(0, 0, 0, 0.8),
-                0 0 20px rgba(56, 189, 248, 0.5)
+                0 0 20px rgba(56, 189, 248, 0.5),
+                0 0 40px rgba(56,189,248,0.8)
               `,
               filter: 'drop-shadow(0 0 15px rgba(56, 189, 248, 0.6))',
               transform: 'perspective(1500px) rotateX(20deg) rotateY(-5deg) translateZ(80px)',
@@ -152,7 +153,7 @@ const FeaturesSection: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes gradientFlow {
           0% { background-position: 0% 50%; }
           50% { background-position: 100% 50%; }
@@ -179,13 +180,13 @@ const FeaturesSection: React.FC = () => {
             text-shadow: 
               2px 2px 0px #1e293b,
               4px 4px 8px rgba(0, 0, 0, 0.8),
-              0 0 20px rgba(56, 189, 248, 0.5);
+              0 0 10px rgba(56, 189, 248, 0.25);
           }
           50% {
             text-shadow: 
               2px 2px 0px #1e293b,
               4px 4px 8px rgba(0, 0, 0, 0.8),
-              0 0 20px rgba(168, 85, 247, 0.7);
+              0 0 10px rgba(168, 85, 247, 0.35);
           }
         }
         

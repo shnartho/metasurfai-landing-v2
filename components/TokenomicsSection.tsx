@@ -47,8 +47,8 @@ const TokenomicsSection: React.FC = () => {
           <h2 
             className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-rose-200 to-pink-400"
             style={{
-              textShadow: '0 0 40px rgba(244,63,94,0.8), 4px 4px 12px rgba(0,0,0,0.8)',
-              filter: 'drop-shadow(0 0 20px rgba(244,63,94,0.6))',
+              textShadow: '0 0 20px rgba(244,63,94,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
+              filter: 'drop-shadow(0 0 10px rgba(244,63,94,0.3))',
             }}
           >
             MSAI Tokenomics
@@ -57,7 +57,7 @@ const TokenomicsSection: React.FC = () => {
           <p 
             className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
             style={{
-              textShadow: '0 0 20px rgba(255,255,255,0.3)'
+              textShadow: '0 0 10px rgba(255,255,255,0.15)'
             }}
           >
             The MSAI token is the lifeblood of the MetaSurfAI ecosystem, designed for utility and sustainable growth. <br />
@@ -289,13 +289,13 @@ const TokenomicsSection: React.FC = () => {
             text-shadow: 
               2px 2px 0px #1e293b,
               4px 4px 8px rgba(0, 0, 0, 0.8),
-              0 0 20px rgba(56, 189, 248, 0.5);
+              0 0 10px rgba(56, 189, 248, 0.25);
           }
           50% {
             text-shadow: 
               2px 2px 0px #1e293b,
               4px 4px 8px rgba(0, 0, 0, 0.8),
-              0 0 20px rgba(168, 85, 247, 0.7);
+              0 0 10px rgba(168, 85, 247, 0.35);
           }
         }
         

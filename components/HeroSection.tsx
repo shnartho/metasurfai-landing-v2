@@ -2,27 +2,6 @@
 import React, { Suspense } from 'react';
 import { Crypto3DScene } from './icons/CryptoIcons';
 
-const Text3DEffect: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
-  <div
-    className={`${className} animate-fadeInUp metasurf-glow`}
-    style={{
-      textShadow: `
-        0 0 10px rgba(56, 189, 248, 0.8),
-        0 0 20px rgba(56, 189, 248, 0.6),
-        0 0 30px rgba(56, 189, 248, 0.4),
-        0 0 40px rgba(56, 189, 248, 0.2),
-        2px 2px 0px rgba(0, 0, 0, 0.8),
-        4px 4px 0px rgba(0, 0, 0, 0.6),
-        6px 6px 0px rgba(0, 0, 0, 0.4)
-      `,
-      transform: 'perspective(500px) rotateX(15deg)',
-      animation: 'float 6s ease-in-out infinite, metasurfGlow 4s ease-in-out infinite',
-    }}
-  >
-    {children}
-  </div>
-);
-
 const HeroSection: React.FC = () => {
   return (
     <>
@@ -66,23 +45,27 @@ const HeroSection: React.FC = () => {
         </div>
         
         <div className="relative z-10 text-center px-4">
-          <Text3DEffect className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-cyan-200 to-blue-400">
+          <h1 
+            className="text-7xl md:text-8xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-cyan-200 to-blue-400"
+            style={{
+              textShadow: '0 0 20px rgba(56,189,248,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
+              filter: 'drop-shadow(0 0 10px rgba(56,189,248,0.3))',
+              transform: 'perspective(1000px) rotateX(10deg)',
+              animation: 'float 8s ease-in-out infinite'
+            }}
+          >
             MetaSurfAI
-          </Text3DEffect>
+          </h1>
           
           <div 
             className="mt-8 text-lg md:text-2xl text-gray-300 max-w-4xl mx-auto animate-fadeInUp"
             style={{
-              textShadow: '0 0 15px rgba(255, 255, 255, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.8)',
+              textShadow: '0 0 8px rgba(255, 255, 255, 0.15), 2px 2px 4px rgba(0, 0, 0, 0.8)',
               animationDelay: '0.5s'
             }}
           >
-            Revolutionizing the <span className="text-yellow-300 font-bold">$1.2 Trillion</span> Advertising Industry. <br />
+            Solution of the <span className="text-yellow-300 font-bold">$1.2 Trillion</span> Advertising Industry. <br />
             <span className="text-cyan-300 font-semibold">Where Users Earn, Advertisers Win, and Everyone Profits.</span>
-            <br />
-            <span className="text-purple-300 font-medium text-lg">
-              Join the Web3 advertising revolution that rewards engagement.
-            </span>
           </div>
           
           <div 
@@ -137,13 +120,18 @@ const HeroSection: React.FC = () => {
       </section>
       
       <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) scale(1); }
+          50% { transform: translateY(-20px) scale(1.1); }
+        }
+        
         @keyframes metasurfGlow {
           0% {
             text-shadow: 
-              0 0 8px rgba(56, 189, 248, 0.4),
-              0 0 16px rgba(56, 189, 248, 0.3),
-              0 0 24px rgba(56, 189, 248, 0.2),
-              0 0 32px rgba(56, 189, 248, 0.1),
+              0 0 4px rgba(56, 189, 248, 0.2),
+              0 0 8px rgba(56, 189, 248, 0.15),
+              0 0 12px rgba(56, 189, 248, 0.1),
+              0 0 16px rgba(56, 189, 248, 0.05),
               2px 2px 0px rgba(0, 0, 0, 0.8),
               4px 4px 0px rgba(0, 0, 0, 0.6),
               6px 6px 0px rgba(0, 0, 0, 0.4);
@@ -151,11 +139,11 @@ const HeroSection: React.FC = () => {
           }
           25% {
             text-shadow: 
-              0 0 12px rgba(56, 189, 248, 0.6),
-              0 0 24px rgba(56, 189, 248, 0.4),
-              0 0 36px rgba(56, 189, 248, 0.3),
-              0 0 48px rgba(56, 189, 248, 0.2),
-              0 0 60px rgba(168, 85, 247, 0.25),
+              0 0 6px rgba(56, 189, 248, 0.3),
+              0 0 12px rgba(56, 189, 248, 0.2),
+              0 0 18px rgba(56, 189, 248, 0.15),
+              0 0 24px rgba(56, 189, 248, 0.1),
+              0 0 30px rgba(168, 85, 247, 0.125),
               2px 2px 0px rgba(0, 0, 0, 0.8),
               4px 4px 0px rgba(0, 0, 0, 0.6),
               6px 6px 0px rgba(0, 0, 0, 0.4);
@@ -163,12 +151,12 @@ const HeroSection: React.FC = () => {
           }
           50% {
             text-shadow: 
-              0 0 16px rgba(56, 189, 248, 0.7),
-              0 0 32px rgba(56, 189, 248, 0.5),
-              0 0 48px rgba(56, 189, 248, 0.4),
-              0 0 64px rgba(56, 189, 248, 0.3),
-              0 0 80px rgba(168, 85, 247, 0.3),
-              0 0 96px rgba(16, 185, 129, 0.2),
+              0 0 8px rgba(56, 189, 248, 0.35),
+              0 0 16px rgba(56, 189, 248, 0.25),
+              0 0 24px rgba(56, 189, 248, 0.2),
+              0 0 32px rgba(56, 189, 248, 0.15),
+              0 0 40px rgba(168, 85, 247, 0.15),
+              0 0 48px rgba(16, 185, 129, 0.1),
               2px 2px 0px rgba(0, 0, 0, 0.8),
               4px 4px 0px rgba(0, 0, 0, 0.6),
               6px 6px 0px rgba(0, 0, 0, 0.4);
@@ -176,11 +164,11 @@ const HeroSection: React.FC = () => {
           }
           75% {
             text-shadow: 
-              0 0 12px rgba(56, 189, 248, 0.6),
-              0 0 24px rgba(56, 189, 248, 0.4),
-              0 0 36px rgba(56, 189, 248, 0.3),
-              0 0 48px rgba(56, 189, 248, 0.2),
-              0 0 60px rgba(168, 85, 247, 0.25),
+              0 0 6px rgba(56, 189, 248, 0.3),
+              0 0 12px rgba(56, 189, 248, 0.2),
+              0 0 18px rgba(56, 189, 248, 0.15),
+              0 0 24px rgba(56, 189, 248, 0.1),
+              0 0 30px rgba(168, 85, 247, 0.125),
               2px 2px 0px rgba(0, 0, 0, 0.8),
               4px 4px 0px rgba(0, 0, 0, 0.6),
               6px 6px 0px rgba(0, 0, 0, 0.4);
@@ -188,10 +176,10 @@ const HeroSection: React.FC = () => {
           }
           100% {
             text-shadow: 
-              0 0 8px rgba(56, 189, 248, 0.4),
-              0 0 16px rgba(56, 189, 248, 0.3),
-              0 0 24px rgba(56, 189, 248, 0.2),
-              0 0 32px rgba(56, 189, 248, 0.1),
+              0 0 4px rgba(56, 189, 248, 0.2),
+              0 0 8px rgba(56, 189, 248, 0.15),
+              0 0 12px rgba(56, 189, 248, 0.1),
+              0 0 16px rgba(56, 189, 248, 0.05),
               2px 2px 0px rgba(0, 0, 0, 0.8),
               4px 4px 0px rgba(0, 0, 0, 0.6),
               6px 6px 0px rgba(0, 0, 0, 0.4);

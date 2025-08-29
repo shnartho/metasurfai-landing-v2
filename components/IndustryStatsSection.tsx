@@ -52,8 +52,8 @@ const StatCard: React.FC<StatCardProps> = ({ number, label, description, index, 
       <div 
         className="text-5xl md:text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-cyan-200 to-blue-400 group-hover:scale-110 transition-transform duration-300"
         style={{
-          textShadow: '0 0 30px rgba(56,189,248,0.6), 2px 2px 8px rgba(0,0,0,0.8)',
-          filter: 'drop-shadow(0 0 15px rgba(56,189,248,0.5))'
+          textShadow: '0 0 15px rgba(56,189,248,0.3), 2px 2px 8px rgba(0,0,0,0.8)',
+          filter: 'drop-shadow(0 0 8px rgba(56,189,248,0.25))'
         }}
       >
         {number}
@@ -62,7 +62,7 @@ const StatCard: React.FC<StatCardProps> = ({ number, label, description, index, 
       <h3 
         className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300"
         style={{
-          textShadow: '0 0 15px rgba(255,255,255,0.3)'
+          textShadow: '0 0 8px rgba(255,255,255,0.15)'
         }}
       >
         {label}
@@ -129,69 +129,7 @@ const IndustryStatsSection: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-        {/* Section header */}
-        <div className="text-center mb-20 animate-fadeInUp">
-          <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6">
-            <span className="text-cyan-300 font-semibold text-sm uppercase tracking-wide">Market Opportunity</span>
-          </div>
-          
-          <h2 
-            className="text-5xl md:text-7xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-cyan-200 to-blue-400"
-            style={{
-              textShadow: '0 0 40px rgba(56,189,248,0.8), 4px 4px 12px rgba(0,0,0,0.8)',
-              filter: 'drop-shadow(0 0 20px rgba(56,189,248,0.6))',
-              transform: 'perspective(1000px) rotateX(10deg)',
-              animation: 'float 8s ease-in-out infinite'
-            }}
-          >
-            Trillion Dollar Revolution
-          </h2>
-          
-          <p 
-            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
-            style={{
-              textShadow: '0 0 20px rgba(255,255,255,0.3)'
-            }}
-          >
-            Join the next evolution of advertising where <span className="text-cyan-300 font-bold">everyone wins</span>. 
-            Google, Meta, Amazon - they all built empires on advertising. 
-            Now it's time for <span className="text-purple-300 font-bold">decentralized</span> advertising.
-          </p>
-        </div>
 
-        {/* Stats grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {industryStats.map((stat, index) => (
-            <StatCard 
-              key={index}
-              number={stat.number}
-              label={stat.label}
-              description={stat.description}
-              index={index}
-              gradient={stat.gradient}
-            />
-          ))}
-        </div>
-
-        {/* Call to action */}
-        <div className="text-center mt-20 animate-fadeInUp" style={{ animationDelay: '1s' }}>
-          <div className="inline-flex items-center gap-4 px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-400/20">
-            <div className="flex -space-x-2">
-              {['💼', '📈', '🚀', '💎'].map((emoji, i) => (
-                <div 
-                  key={i} 
-                  className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-400/20 flex items-center justify-center text-lg animate-bounce"
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                >
-                  {emoji}
-                </div>
-              ))}
-            </div>
-            <span className="text-cyan-300 font-semibold">
-              Ready to be part of the $1.2T advertising revolution?
-            </span>
-          </div>
-        </div>
       </div>
 
       <style>{`

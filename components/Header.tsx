@@ -1,19 +1,57 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
+  const ticking = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      if (!ticking.current) {
+        requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          
+          // Update scrolled state for background effects
+          setScrolled(currentScrollY > 50);
+          
+          // Handle visibility based on scroll direction
+          if (currentScrollY <= 10) {
+            // Always show header at top of page
+            setIsVisible(true);
+          } else {
+            const scrollingDown = currentScrollY > lastScrollY.current;
+            const scrollingUp = currentScrollY < lastScrollY.current;
+            
+            if (scrollingDown && currentScrollY > 100) {
+              // Scrolling down - hide header
+              setIsVisible(false);
+            } else if (scrollingUp) {
+              // Scrolling up - show header
+              setIsVisible(true);
+            }
+          }
+          
+          lastScrollY.current = currentScrollY;
+          ticking.current = false;
+        });
+        
+        ticking.current = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 animate-fadeInUp">
+    <header 
+      className="fixed top-0 left-0 right-0 z-50 transition-transform duration-500 ease-in-out"
+      style={{
+        transform: isVisible ? 'translateY(0)' : 'translateY(-100%)',
+      }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           className={`flex items-center justify-between h-20 px-6 rounded-b-3xl border-b transition-all duration-500 ${
@@ -52,40 +90,7 @@ const Header: React.FC = () => {
             MetaSurf<span className="text-sky-400">AI</span>
           </div>
 
-          {/* Navigation with enhanced effects */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {['Features', 'Tokenomics', 'Roadmap'].map((item, index) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="relative text-gray-300 font-medium transition-all duration-300 group hover:scale-105 hover:text-white animate-fadeInUp"
-                style={{
-                  animationDelay: `${0.1 * index}s`
-                }}
-              >
-                <span className="relative z-10">
-                  {item}
-                </span>
-                
-                {/* Animated underline */}
-                <div
-                  className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 opacity-0 group-hover:opacity-100 transform scale-x-0 group-hover:scale-x-100 transition-all duration-300"
-                  style={{
-                    transformOrigin: 'left center'
-                  }}
-                />
-                
-                {/* Glow effect */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"
-                  style={{
-                    filter: 'blur(8px)',
-                    transform: 'scale(1.2)'
-                  }}
-                />
-              </a>
-            ))}
-          </nav>
+
 
           {/* CTA Button with enhanced 3D effects */}
           <a

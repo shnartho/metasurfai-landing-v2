@@ -97,8 +97,8 @@ const LiveMetric: React.FC<LiveMetricProps> = ({
     <div 
       className="text-4xl md:text-5xl font-black mb-2 text-transparent bg-clip-text bg-gradient-to-br from-white via-cyan-200 to-blue-400"
       style={{
-        textShadow: '0 0 30px rgba(56,189,248,0.6)',
-        filter: 'drop-shadow(0 0 15px rgba(56,189,248,0.5))'
+        textShadow: '0 0 15px rgba(56,189,248,0.3)',
+        filter: 'drop-shadow(0 0 8px rgba(56,189,248,0.25))'
       }}
     >
       <MetricCounter 
@@ -121,10 +121,10 @@ const LiveMetric: React.FC<LiveMetricProps> = ({
       <div 
         className={`text-${trendColor}-400 text-sm font-semibold flex items-center gap-1`}
       >
-        <span>↗</span>
+        <span>{trendColor === 'red' ? '↘' : '↗'}</span>
         <span>{trend}</span>
       </div>
-      <span className="text-gray-500 text-xs">vs last month</span>
+      <span className="text-gray-500 text-xs">vs current market</span>
     </div>
 
     {/* Animated background */}
@@ -139,64 +139,67 @@ const LiveMetric: React.FC<LiveMetricProps> = ({
 
 const liveMetrics = [
   {
-    title: 'Active Ad Watchers',
-    value: 534280,
-    suffix: '',
-    description: 'Users currently engaged with advertisements across all platforms',
-    trend: '+24.3%',
-    trendColor: 'green',
-    icon: '👥',
-    formatter: (num: number) => num.toLocaleString()
-  },
-  {
-    title: 'Tokens Earned Today',
-    value: 1847320,
-    suffix: '',
-    description: 'MSAI tokens distributed to users for watching ads in the last 24 hours',
-    trend: '+18.7%',
-    trendColor: 'green',
-    icon: '🪙',
-    formatter: (num: number) => num.toLocaleString()
-  },
-  {
-    title: 'Ad Completion Rate',
-    value: 87,
-    suffix: '%',
-    description: 'Percentage of ads watched to completion vs traditional 3-5%',
-    trend: '+12.1%',
-    trendColor: 'green',
-    icon: '✅',
-    formatter: (num: number) => num.toString()
-  },
-  {
-    title: 'Enterprise Partners',
-    value: 2847,
-    suffix: '',
-    description: 'Companies actively running campaigns on MetaSurfAI platform',
-    trend: '+31.2%',
-    trendColor: 'green',
-    icon: '🏢',
-    formatter: (num: number) => num.toLocaleString()
-  },
-  {
-    title: 'Monthly Revenue',
-    value: 47,
-    suffix: 'M',
+    title: 'Global Ad Spend',
+    value: 1200,
+    suffix: 'B',
     prefix: '$',
-    description: 'Platform revenue generated from advertising partnerships',
-    trend: '+42.8%',
+    description: 'Annual worldwide digital advertising market size that MetaSurfAI is targeting',
+    trend: '+8.7%',
     trendColor: 'green',
-    icon: '💰',
+    icon: '🌐',
     formatter: (num: number) => num.toString()
   },
   {
-    title: 'Countries Active',
-    value: 89,
-    suffix: '',
-    description: 'Global reach across different countries and regions',
-    trend: '+8.9%',
+    title: 'Potential User Earnings',
+    value: 2400,
+    suffix: '/month',
+    prefix: '$',
+    description: 'Estimated monthly earnings per active user when platform reaches scale',
+    trend: '+∞%',
     trendColor: 'green',
-    icon: '🌍',
+    icon: '💎',
+    formatter: (num: number) => num.toLocaleString()
+  },
+  {
+    title: 'Target Completion Rate',
+    value: 95,
+    suffix: '%',
+    description: 'Projected ad completion rate with our incentive model vs industry 3-5%',
+    trend: '+1800%',
+    trendColor: 'green',
+    icon: '🎯',
+    formatter: (num: number) => num.toString()
+  },
+  {
+    title: 'Wasted Ad Spend',
+    value: 420,
+    suffix: 'B',
+    prefix: '$',
+    description: 'Annual global ad spend lost to poor engagement - our opportunity',
+    trend: '-35%',
+    trendColor: 'red',
+    icon: '💸',
+    formatter: (num: number) => num.toString()
+  },
+  {
+    title: 'Platform Revenue Potential',
+    value: 15,
+    suffix: 'B',
+    prefix: '$',
+    description: 'Projected annual revenue at 10% market capture with our model',
+    trend: '+∞%',
+    trendColor: 'green',
+    icon: '�',
+    formatter: (num: number) => num.toString()
+  },
+  {
+    title: 'Target Markets',
+    value: 195,
+    suffix: '',
+    description: 'Countries where we plan to establish operations by 2027',
+    trend: '+100%',
+    trendColor: 'green',
+    icon: '🗺️',
     formatter: (num: number) => num.toString()
   }
 ];
@@ -232,29 +235,21 @@ const LiveMetricsSection: React.FC = () => {
               <div className="w-2 h-2 bg-green-400 rounded-full animate-ping absolute"></div>
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>
             </div>
-            <span className="text-green-300 font-semibold text-sm uppercase tracking-wide">Live Metrics</span>
+            <span className="text-green-300 font-semibold text-sm uppercase tracking-wide">Market Opportunity</span>
           </div>
           
           <h2 
             className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-green-200 to-cyan-400"
             style={{
-              textShadow: '0 0 40px rgba(34,197,94,0.8), 4px 4px 12px rgba(0,0,0,0.8)',
-              filter: 'drop-shadow(0 0 20px rgba(34,197,94,0.6))',
+              textShadow: '0 0 20px rgba(34,197,94,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
+              filter: 'drop-shadow(0 0 10px rgba(34,197,94,0.3))',
             }}
           >
             Real-Time Impact
           </h2>
           
-          <p 
-            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
-            style={{
-              textShadow: '0 0 20px rgba(255,255,255,0.3)'
-            }}
-          >
-            Watch our ecosystem grow in real-time. Every number represents 
-            <span className="text-green-300 font-bold"> real users</span>, 
-            <span className="text-cyan-300 font-bold"> real engagement</span>, and 
-            <span className="text-blue-300 font-bold"> real revenue</span>.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Global advertising market data and MetaSurfAI's revolutionary potential to transform how users earn from digital engagement
           </p>
         </div>
 
@@ -277,30 +272,7 @@ const LiveMetricsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Bottom insight */}
-        <div className="text-center mt-20 animate-fadeInUp" style={{ animationDelay: '1.5s' }}>
-          <div className="inline-block p-8 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-green-500/10 border border-cyan-400/20 max-w-4xl">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <div className="text-3xl">📊</div>
-              <h3 className="text-2xl font-bold text-white">Why These Numbers Matter</h3>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div className="p-4 rounded-xl bg-white/5">
-                <div className="text-green-400 font-bold mb-2">High Engagement</div>
-                <p className="text-gray-400 text-sm">87% completion rate vs industry 3-5% means real attention, not bot traffic</p>
-              </div>
-              <div className="p-4 rounded-xl bg-white/5">
-                <div className="text-cyan-400 font-bold mb-2">Growing Network</div>
-                <p className="text-gray-400 text-sm">500K+ active users and 2.8K+ enterprises create a self-sustaining ecosystem</p>
-              </div>
-              <div className="p-4 rounded-xl bg-white/5">
-                <div className="text-blue-400 font-bold mb-2">Proven Revenue</div>
-                <p className="text-gray-400 text-sm">$47M monthly revenue proves the model works at scale</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
 
       <style>{`

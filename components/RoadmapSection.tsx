@@ -106,23 +106,14 @@ const RoadmapSection: React.FC = () => {
           <h2 
             className="text-4xl md:text-6xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-red-200 to-rose-400"
             style={{
-              textShadow: '0 0 40px rgba(239,68,68,0.8), 4px 4px 12px rgba(0,0,0,0.8)',
-              filter: 'drop-shadow(0 0 20px rgba(239,68,68,0.6))',
+              textShadow: '0 0 20px rgba(239,68,68,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
+              filter: 'drop-shadow(0 0 10px rgba(239,68,68,0.3))',
+              transform: 'perspective(1000px) rotateX(10deg)',
+              animation: 'float 8s ease-in-out infinite'
             }}
           >
             Our Roadmap
           </h2>
-          
-          <p 
-            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
-            style={{
-              textShadow: '0 0 20px rgba(255,255,255,0.3)'
-            }}
-          >
-            Charting the course for a decentralized advertising future. <br />
-            <span className="text-rose-300 font-bold">Strategic milestones</span> leading to 
-            <span className="text-red-300 font-bold"> advertising revolution</span>.
-          </p>
         </div>
         <div className="relative">
           <div className="absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-rose-500/50 via-red-500/50 to-transparent -translate-x-1/2 hidden lg:block"></div>

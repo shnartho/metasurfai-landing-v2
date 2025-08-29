@@ -241,11 +241,11 @@ const App: React.FC = () => {
         </div>
         
         <div className="animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
-          <TrustedBySection />
+          <LiveMetricsSection />
         </div>
         
         <div className="animate-fadeInUp" style={{ animationDelay: '0.35s' }}>
-          <LiveMetricsSection />
+          <TrustedBySection />
         </div>
         
         <div className="px-4 md:px-8 max-w-7xl mx-auto space-y-32 md:space-y-40 py-32 md:py-40">

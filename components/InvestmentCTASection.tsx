@@ -32,8 +32,9 @@ const InvestmentCTASection: React.FC = () => {
           <h2 
             className="text-5xl md:text-7xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-br from-yellow-300 via-orange-300 to-red-400"
             style={{
-              textShadow: '0 0 50px rgba(251,191,36,1), 6px 6px 15px rgba(0,0,0,0.9)',
-              filter: 'drop-shadow(0 0 25px rgba(251,191,36,0.8))',
+              textShadow: '0 0 25px rgba(251,191,36,0.5), 6px 6px 15px rgba(0,0,0,0.9)',
+              filter: 'drop-shadow(0 0 12px rgba(251,191,36,0.4))',
+              transform: 'perspective(1000px) rotateX(10deg)',
               animation: 'float 6s ease-in-out infinite, glow 3s ease-in-out infinite'
             }}
           >
@@ -188,30 +189,7 @@ const InvestmentCTASection: React.FC = () => {
           </div>
         </div>
 
-        {/* Final investment message */}
-        <div className="animate-fadeInUp" style={{ animationDelay: '1.2s' }}>
-          <div className="max-w-4xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-400/20">
-            <div className="text-6xl mb-6">🎯</div>
-            <h3 className="text-3xl font-bold text-white mb-4">The Investment Thesis is Simple</h3>
-            <div className="text-xl text-gray-300 leading-relaxed space-y-4">
-              <p>
-                <span className="text-yellow-300 font-bold">Traditional advertising giants</span> built trillion-dollar empires 
-                by keeping 100% of revenue while users got nothing.
-              </p>
-              <p>
-                <span className="text-cyan-300 font-bold">MetaSurfAI disrupts this</span> by sharing revenue with users, 
-                creating unprecedented engagement and loyalty.
-              </p>
-              <p>
-                <span className="text-green-300 font-bold">Early investors</span> in this paradigm shift 
-                could see the same explosive growth as early Google/Meta investors.
-              </p>
-              <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-                The question isn't IF this will happen. It's WHO will profit from it.
-              </p>
-            </div>
-          </div>
-        </div>
+
       </div>
 
       <style>{`
@@ -222,10 +200,10 @@ const InvestmentCTASection: React.FC = () => {
         
         @keyframes glow {
           0%, 100% {
-            text-shadow: 0 0 50px rgba(251,191,36,1), 6px 6px 15px rgba(0,0,0,0.9);
+            text-shadow: 0 0 25px rgba(251,191,36,0.5), 6px 6px 15px rgba(0,0,0,0.9);
           }
           50% {
-            text-shadow: 0 0 70px rgba(251,191,36,1.2), 6px 6px 15px rgba(0,0,0,0.9);
+            text-shadow: 0 0 35px rgba(251,191,36,0.6), 6px 6px 15px rgba(0,0,0,0.9);
           }
         }
         
