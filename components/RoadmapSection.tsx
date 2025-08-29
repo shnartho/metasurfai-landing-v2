@@ -35,7 +35,22 @@ const RoadmapSection: React.FC = () => {
   return (
     <section id="roadmap">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-500">
+        <h2 
+          className="text-4xl md:text-5xl font-extrabold mb-4 animate-titleGlow text-sky-400"
+          style={{
+            color: '#38bdf8',
+            animation: 'titleFloat 6s ease-in-out infinite, titleGlow 3s ease-in-out infinite',
+            textShadow: `
+              2px 2px 0px #1e293b,
+              4px 4px 8px rgba(0, 0, 0, 0.8),
+              0 0 20px rgba(56, 189, 248, 0.5)
+            `,
+            filter: 'drop-shadow(0 0 15px rgba(56, 189, 248, 0.6))',
+            transform: 'perspective(1500px) rotateX(20deg) rotateY(-5deg) translateZ(80px)',
+            letterSpacing: '1px',
+            fontWeight: '900',
+          }}
+        >
           Our Roadmap
         </h2>
         <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
@@ -71,6 +86,42 @@ const RoadmapSection: React.FC = () => {
           />
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes titleFloat {
+          0%, 100% { 
+            transform: perspective(1500px) rotateX(20deg) rotateY(-5deg) translateZ(80px) translateY(0px);
+          }
+          25% { 
+            transform: perspective(1500px) rotateX(25deg) rotateY(-3deg) translateZ(90px) translateY(-8px);
+          }
+          50% { 
+            transform: perspective(1500px) rotateX(15deg) rotateY(-7deg) translateZ(100px) translateY(-12px);
+          }
+          75% { 
+            transform: perspective(1500px) rotateX(22deg) rotateY(-2deg) translateZ(85px) translateY(-5px);
+          }
+        }
+        
+        @keyframes titleGlow {
+          0%, 100% {
+            text-shadow: 
+              2px 2px 0px #1e293b,
+              4px 4px 8px rgba(0, 0, 0, 0.8),
+              0 0 20px rgba(56, 189, 248, 0.5);
+          }
+          50% {
+            text-shadow: 
+              2px 2px 0px #1e293b,
+              4px 4px 8px rgba(0, 0, 0, 0.8),
+              0 0 20px rgba(168, 85, 247, 0.7);
+          }
+        }
+        
+        .animate-titleGlow {
+          animation: titleGlow 3s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };

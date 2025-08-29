@@ -4,69 +4,318 @@ import { ChevronRightIcon } from './icons/UtilIcons';
 
 const TokenomicsSection: React.FC = () => {
   return (
-    <section id="tokenomics">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-500">
-          MSAI Tokenomics
-        </h2>
-        <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-          The MSAI token is the lifeblood of the MetaSurfAI ecosystem, designed for utility and sustainable growth.
-        </p>
+    <section id="tokenomics" className="relative">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className="absolute top-1/3 left-1/6 w-80 h-80 bg-gradient-to-r from-sky-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse"
+          style={{
+            animation: 'float 12s ease-in-out infinite'
+          }}
+        />
+        <div
+          className="absolute bottom-1/3 right-1/6 w-72 h-72 bg-gradient-to-l from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse"
+          style={{
+            animation: 'float-reverse 15s ease-in-out infinite',
+            animationDelay: '3s'
+          }}
+        />
       </div>
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
-        {/* Animated Diagram */}
-        <div className="relative w-80 h-80 flex items-center justify-center">
-          <div className="absolute w-full h-full border-2 border-dashed border-sky-500/30 rounded-full animate-spin" style={{ animationDuration: '30s' }}></div>
-          <div className="absolute w-64 h-64 border-2 border-dashed border-purple-500/30 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '25s' }}></div>
 
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -mt-6 text-center">
-            <div className="w-24 p-2 bg-sky-900/50 border border-sky-400/50 rounded-lg text-sm">Earn</div>
-            <ChevronRightIcon className="w-6 h-6 absolute top-full left-1/2 -translate-x-1/2 mt-1 text-sky-400 rotate-90" />
-          </div>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 -mr-6 text-center">
-            <div className="w-24 p-2 bg-purple-900/50 border border-purple-400/50 rounded-lg text-sm">Spend</div>
-            <ChevronRightIcon className="w-6 h-6 absolute right-full top-1/2 -translate-y-1/2 mr-1 text-purple-400" />
-          </div>
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 -mb-6 text-center">
-            <div className="w-24 p-2 bg-sky-900/50 border border-sky-400/50 rounded-lg text-sm">Burn</div>
-            <ChevronRightIcon className="w-6 h-6 absolute bottom-full left-1/2 -translate-x-1/2 mb-1 text-sky-400 -rotate-90" />
-          </div>
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -ml-6 text-center">
-            <div className="w-24 p-2 bg-purple-900/50 border border-purple-400/50 rounded-lg text-sm">Value Growth</div>
-            <ChevronRightIcon className="w-6 h-6 absolute left-full top-1/2 -translate-y-1/2 ml-1 text-purple-400 rotate-180" />
-          </div>
-
-          <div className="text-center bg-white/5 backdrop-blur-xl p-6 rounded-full border border-white/10">
-            <div className="text-4xl font-bold text-sky-400">MSAI</div>
-            <div className="text-sm">Ecosystem</div>
-          </div>
+      <div className="relative z-10">
+        <div 
+          className="text-center mb-16 animate-fadeInUp"
+        >
+          <h2 
+            className="text-4xl md:text-5xl font-extrabold mb-4 animate-titleGlow text-sky-400"
+            style={{
+              color: '#38bdf8',
+              animation: 'titleFloat 6s ease-in-out infinite, titleGlow 3s ease-in-out infinite',
+              textShadow: `
+                2px 2px 0px #1e293b,
+                4px 4px 8px rgba(0, 0, 0, 0.8),
+                0 0 20px rgba(56, 189, 248, 0.5)
+              `,
+              filter: 'drop-shadow(0 0 15px rgba(56, 189, 248, 0.6))',
+              transform: 'perspective(1500px) rotateX(20deg) rotateY(-5deg) translateZ(80px)',
+              letterSpacing: '1px',
+              fontWeight: '900',
+            }}
+          >
+            MSAI Tokenomics
+          </h2>
+          <p 
+            className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto"
+            style={{
+              textShadow: '0 0 10px rgba(255,255,255,0.2)'
+            }}
+          >
+            The MSAI token is the lifeblood of the MetaSurfAI ecosystem, designed for utility and sustainable growth.
+          </p>
         </div>
 
-        {/* Infographic */}
-        <div className="w-full max-w-md p-8 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 space-y-6">
-          <div>
-            <p className="text-sm text-sky-400 font-semibold">Total Supply</p>
-            <p className="text-2xl font-bold text-white">1,000,000,000 MSAI</p>
-            <p className="text-xs text-gray-400">Built on Solana Layer 1 for speed and low fees.</p>
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
+          {/* Animated 3D Diagram */}
+          <div 
+            className="relative w-96 h-96 flex items-center justify-center animate-fadeInUp"
+            style={{ animationDelay: '0.1s' }}
+          >
+            {/* Outer rotating ring */}
+            <div 
+              className="absolute w-full h-full border-4 border-dashed border-sky-500/40 rounded-full"
+              style={{
+                filter: 'drop-shadow(0 0 20px rgba(56, 189, 248, 0.5))',
+                animation: 'rotate-slow 30s linear infinite'
+              }}
+            />
+            
+            {/* Inner rotating ring */}
+            <div 
+              className="absolute w-64 h-64 border-4 border-dashed border-purple-500/40 rounded-full"
+              style={{
+                filter: 'drop-shadow(0 0 15px rgba(168, 85, 247, 0.5))',
+                animation: 'rotate-reverse 25s linear infinite'
+              }}
+            />
+
+            {/* Action nodes */}
+            <div 
+              className="absolute top-0 left-1/2 -translate-x-1/2 -mt-8 text-center hover:scale-110 transition-transform duration-300"
+              style={{
+                filter: 'drop-shadow(0 0 10px rgba(56, 189, 248, 0.7))',
+              }}
+            >
+              <div 
+                className="w-28 p-3 bg-sky-900/70 border-2 border-sky-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-sky-400 hover:bg-sky-800/90 transition-all duration-300"
+                style={{
+                  boxShadow: '0 0 25px rgba(56, 189, 248, 0.4)'
+                }}
+              >
+                Earn
+              </div>
+              <ChevronRightIcon className="w-6 h-6 absolute top-full left-1/2 -translate-x-1/2 mt-2 text-sky-400 rotate-90" />
+            </div>
+
+            <div 
+              className="absolute right-0 top-1/2 -translate-y-1/2 -mr-8 text-center hover:scale-110 transition-transform duration-300"
+              style={{
+                filter: 'drop-shadow(0 0 10px rgba(168, 85, 247, 0.7))',
+              }}
+            >
+              <div 
+                className="w-28 p-3 bg-purple-900/70 border-2 border-purple-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-purple-400 hover:bg-purple-800/90 transition-all duration-300"
+                style={{
+                  boxShadow: '0 0 25px rgba(168, 85, 247, 0.4)'
+                }}
+              >
+                Spend
+              </div>
+              <ChevronRightIcon className="w-6 h-6 absolute right-full top-1/2 -translate-y-1/2 mr-2 text-purple-400" />
+            </div>
+
+            <div 
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 -mb-8 text-center hover:scale-110 transition-transform duration-300"
+              style={{
+                filter: 'drop-shadow(0 0 10px rgba(56, 189, 248, 0.7))',
+              }}
+            >
+              <div 
+                className="w-28 p-3 bg-sky-900/70 border-2 border-sky-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-sky-400 hover:bg-sky-800/90 transition-all duration-300"
+                style={{
+                  boxShadow: '0 0 25px rgba(56, 189, 248, 0.4)'
+                }}
+              >
+                Burn
+              </div>
+              <ChevronRightIcon className="w-6 h-6 absolute bottom-full left-1/2 -translate-x-1/2 mb-2 text-sky-400 -rotate-90" />
+            </div>
+
+            <div 
+              className="absolute left-0 top-1/2 -translate-y-1/2 -ml-8 text-center hover:scale-110 transition-transform duration-300"
+              style={{
+                filter: 'drop-shadow(0 0 10px rgba(168, 85, 247, 0.7))',
+              }}
+            >
+              <div 
+                className="w-28 p-3 bg-purple-900/70 border-2 border-purple-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-purple-400 hover:bg-purple-800/90 transition-all duration-300"
+                style={{
+                  boxShadow: '0 0 25px rgba(168, 85, 247, 0.4)'
+                }}
+              >
+                Value Growth
+              </div>
+              <ChevronRightIcon className="w-6 h-6 absolute left-full top-1/2 -translate-y-1/2 ml-2 text-purple-400 rotate-180" />
+            </div>
+
+            {/* Central hub */}
+            <div 
+              className="text-center bg-white/10 backdrop-blur-xl p-8 rounded-full border-2 border-white/20 relative z-10 hover:scale-105 transition-transform duration-300"
+              style={{
+                background: `
+                  radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%),
+                  linear-gradient(45deg, rgba(56,189,248,0.1), rgba(168,85,247,0.1))
+                `,
+                animation: 'glow-pulse 3s ease-in-out infinite'
+              }}
+            >
+              <div 
+                className="text-5xl font-bold text-sky-400 mb-2"
+                style={{
+                  textShadow: '0 0 20px rgba(56, 189, 248, 0.8)'
+                }}
+              >
+                MSAI
+              </div>
+              <div className="text-lg font-semibold text-white">Ecosystem</div>
+            </div>
           </div>
-          <div className="w-full h-[1px] bg-white/10"></div>
-          <div>
-            <p className="text-sm text-purple-400 font-semibold">Core Use Cases</p>
-            <ul className="list-disc list-inside text-gray-300 mt-2 space-y-1">
-              <li>Viewer rewards for ad engagement</li>
-              <li>Primary currency for ad spend</li>
-              <li>Staking for platform governance & rewards</li>
-              <li>Minting & trading NFT Ad Slots</li>
-            </ul>
-          </div>
-          <div className="w-full h-[1px] bg-white/10"></div>
-          <div>
-            <p className="text-sm text-sky-400 font-semibold">Scarcity Mechanism</p>
-            <p className="text-lg font-bold text-white">Deflationary Burn Policy</p>
-            <p className="text-xs text-gray-400">A percentage of all ad spend is permanently burned, reducing total supply over time.</p>
+
+          {/* Enhanced Infographic */}
+          <div 
+            className="w-full max-w-md p-8 bg-white/10 backdrop-blur-lg rounded-3xl border border-white/20 space-y-8 hover:scale-102 transition-transform duration-300 animate-fadeInUp"
+            style={{
+              background: `
+                linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%),
+                radial-gradient(circle at 30% 30%, rgba(56,189,248,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(168,85,247,0.1) 0%, transparent 50%)
+              `,
+              boxShadow: `
+                0 20px 40px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(255,255,255,0.3),
+                0 0 20px rgba(56,189,248,0.1)
+              `,
+              animationDelay: '0.3s'
+            }}
+          >
+            <div
+              className="animate-fadeInUp"
+              style={{ animationDelay: '0.5s' }}
+            >
+              <p className="text-sm text-sky-400 font-semibold">Total Supply</p>
+              <p 
+                className="text-3xl font-bold text-white"
+                style={{
+                  textShadow: '0 0 15px rgba(255,255,255,0.5)'
+                }}
+              >
+                1,000,000,000 MSAI
+              </p>
+              <p className="text-xs text-gray-400">Built on Solana Layer 1 for speed and low fees.</p>
+            </div>
+
+            <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+
+            <div
+              className="animate-fadeInUp"
+              style={{ animationDelay: '0.7s' }}
+            >
+              <p className="text-sm text-purple-400 font-semibold mb-3">Core Use Cases</p>
+              <ul className="space-y-2 text-gray-300">
+                {[
+                  "Viewer rewards for ad engagement",
+                  "Primary currency for ad spend", 
+                  "Staking for platform governance & rewards",
+                  "Minting & trading NFT Ad Slots"
+                ].map((item, index) => (
+                  <li 
+                    key={index}
+                    className="flex items-start animate-slideInLeft"
+                    style={{ animationDelay: `${0.8 + index * 0.1}s` }}
+                  >
+                    <span className="text-sky-400 mr-3 mt-1 text-lg">&#x2713;</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+
+            <div
+              className="animate-fadeInUp"
+              style={{ animationDelay: '1.2s' }}
+            >
+              <p className="text-sm text-sky-400 font-semibold">Scarcity Mechanism</p>
+              <p 
+                className="text-xl font-bold text-white my-2"
+                style={{
+                  textShadow: '0 0 15px rgba(255,255,255,0.5)'
+                }}
+              >
+                Deflationary Burn Policy
+              </p>
+              <p className="text-xs text-gray-400">A percentage of all ad spend is permanently burned, reducing total supply over time.</p>
+            </div>
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes gradientFlow {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes titleFloat {
+          0%, 100% { 
+            transform: perspective(1500px) rotateX(20deg) rotateY(-5deg) translateZ(80px) translateY(0px);
+          }
+          25% { 
+            transform: perspective(1500px) rotateX(25deg) rotateY(-3deg) translateZ(90px) translateY(-8px);
+          }
+          50% { 
+            transform: perspective(1500px) rotateX(15deg) rotateY(-7deg) translateZ(100px) translateY(-12px);
+          }
+          75% { 
+            transform: perspective(1500px) rotateX(22deg) rotateY(-2deg) translateZ(85px) translateY(-5px);
+          }
+        }
+        
+        @keyframes titleGlow {
+          0%, 100% {
+            text-shadow: 
+              2px 2px 0px #1e293b,
+              4px 4px 8px rgba(0, 0, 0, 0.8),
+              0 0 20px rgba(56, 189, 248, 0.5);
+          }
+          50% {
+            text-shadow: 
+              2px 2px 0px #1e293b,
+              4px 4px 8px rgba(0, 0, 0, 0.8),
+              0 0 20px rgba(168, 85, 247, 0.7);
+          }
+        }
+        
+        .animate-titleGlow {
+          animation: titleGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) scale(1); }
+          50% { transform: translateY(-20px) scale(1.1); }
+        }
+        
+        @keyframes float-reverse {
+          0%, 100% { transform: translateY(0px) scale(1); }
+          50% { transform: translateY(20px) scale(1.15); }
+        }
+        
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fadeInUp {
+          animation: fadeInUp 0.8s ease-out forwards;
+        }
+      `}</style>
     </section>
   );
 };
