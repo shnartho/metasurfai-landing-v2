@@ -9,16 +9,16 @@ interface ComparisonRowProps {
 
 const ComparisonRow: React.FC<ComparisonRowProps> = ({ feature, traditional, metasurf, index }) => (
   <div
-    className="grid grid-cols-3 gap-4 py-6 border-b border-white/10 animate-fadeInUp hover:bg-white/5 transition-colors duration-300"
+    className="grid grid-cols-3 gap-2 sm:gap-4 py-3 sm:py-6 border-b border-white/10 animate-fadeInUp hover:bg-white/5 transition-colors duration-300 text-xs sm:text-sm md:text-base"
     style={{ animationDelay: `${index * 0.1}s` }}
   >
     <div className="text-white font-semibold">{feature}</div>
-    <div className="text-red-300 flex items-center gap-2">
-      <span className="text-red-400">❌</span>
+    <div className="text-red-300 flex items-start sm:items-center gap-1 sm:gap-2">
+      <span className="text-red-400 mt-1 sm:mt-0">❌</span>
       {traditional}
     </div>
-    <div className="text-green-300 flex items-center gap-2">
-      <span className="text-green-400">✅</span>
+    <div className="text-green-300 flex items-start sm:items-center gap-1 sm:gap-2">
+      <span className="text-green-400 mt-1 sm:mt-0">✅</span>
       {metasurf}
     </div>
   </div>
@@ -68,13 +68,13 @@ const MarketComparisonSection: React.FC = () => {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         {/* Section header */}
-        <div className="text-center mb-12 animate-fadeInUp">
-          <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-red-500/20 to-green-500/20 border border-orange-400/30 mb-6">
-            <span className="text-orange-300 font-semibold text-sm uppercase tracking-wide">Market Disruption</span>
+        <div className="text-center mb-6 sm:mb-12 animate-fadeInUp">
+          <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-gradient-to-r from-red-500/20 to-green-500/20 border border-orange-400/30 mb-4 sm:mb-6">
+            <span className="text-orange-300 font-semibold text-xs sm:text-sm uppercase tracking-wide">Market Disruption</span>
           </div>
           
           <h2 
-            className="text-4xl md:text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-orange-200 to-green-400"
+            className="text-3xl sm:text-4xl md:text-6xl font-black mb-2 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-orange-200 to-green-400"
             style={{
               textShadow: '0 0 20px rgba(251,146,60,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
               filter: 'drop-shadow(0 0 10px rgba(251,146,60,0.3))',
@@ -86,7 +86,7 @@ const MarketComparisonSection: React.FC = () => {
           </h2>
           
           <p 
-            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            className="text-sm sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
             style={{
               textShadow: '0 0 10px rgba(255,255,255,0.15)'
             }}
@@ -95,17 +95,17 @@ const MarketComparisonSection: React.FC = () => {
         </div>
 
         {/* Comparison table */}
-        <div className="bg-gradient-to-r from-white/5 to-white/10 rounded-3xl p-8 border border-white/20 backdrop-blur-md">
+        <div className="bg-gradient-to-r from-white/5 to-white/10 rounded-3xl p-3 sm:p-8 border border-white/20 backdrop-blur-md">
           {/* Table header */}
-          <div className="grid grid-cols-3 gap-4 pb-6 border-b-2 border-white/20 mb-6">
-            <div className="text-2xl font-bold text-white">Feature</div>
-            <div className="text-2xl font-bold text-red-300 flex items-center gap-2">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 pb-3 sm:pb-6 border-b-2 border-white/20 mb-3 sm:mb-6 text-xs sm:text-sm md:text-base">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-white">Feature</div>
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-red-300 flex items-center gap-1 sm:gap-2">
               <span>🏢</span>
-              Traditional Advertising
+              <span className="hidden xs:inline">Traditional</span> Ad
             </div>
-            <div className="text-2xl font-bold text-green-300 flex items-center gap-2">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-green-300 flex items-center gap-1 sm:gap-2">
               <span>🚀</span>
-              MetaSurfAI
+              MSAI
             </div>
           </div>
 

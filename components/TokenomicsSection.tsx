@@ -57,10 +57,10 @@ const TokenomicsSection: React.FC = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 overflow-hidden">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 overflow-hidden mt-8 sm:mt-0">
           {/* Animated 3D Diagram */}
           <div 
-            className="relative w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 flex items-center justify-center animate-fadeInUp"
+            className="relative w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 flex items-center justify-center animate-fadeInUp mt-8 sm:mt-16 lg:mt-0 px-4"
             style={{ animationDelay: '0.1s' }}
           >
             {/* Outer rotating ring */}
@@ -83,20 +83,20 @@ const TokenomicsSection: React.FC = () => {
 
             {/* Action nodes */}
             <div 
-              className="absolute top-0 left-1/2 -translate-x-1/2 -mt-8 text-center hover:scale-110 transition-transform duration-300"
+              className="absolute top-0 left-1/2 -translate-x-1/2 -mt-4 sm:-mt-8 text-center hover:scale-110 transition-transform duration-300"
               style={{
                 filter: 'drop-shadow(0 0 10px rgba(244, 63, 94, 0.7))',
               }}
             >
               <div 
-                className="w-28 p-3 bg-rose-900/70 border-2 border-rose-400/70 rounded-xl text-sm font-semibold backdrop-blur-lg hover:border-rose-400 hover:bg-rose-800/90 transition-all duration-300"
+                className="w-20 sm:w-28 p-2 sm:p-3 bg-rose-900/70 border-2 border-rose-400/70 rounded-xl text-xs sm:text-sm font-semibold backdrop-blur-lg hover:border-rose-400 hover:bg-rose-800/90 transition-all duration-300"
                 style={{
                   boxShadow: '0 0 25px rgba(244, 63, 94, 0.4)'
                 }}
               >
                 Earn
               </div>
-              <ChevronRightIcon className="w-6 h-6 absolute top-full left-1/2 -translate-x-1/2 mt-2 text-rose-400 rotate-90" />
+              <ChevronRightIcon className="w-4 h-4 sm:w-6 sm:h-6 absolute top-full left-1/2 -translate-x-1/2 mt-1 sm:mt-2 text-rose-400 rotate-90" />
             </div>
 
             <div 

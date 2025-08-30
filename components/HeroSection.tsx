@@ -88,7 +88,7 @@ const HeroSection: React.FC = () => {
         
         <div className="relative z-10 text-center px-4">
           <h1 
-            className="text-7xl md:text-8xl font-black mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-cyan-200 to-blue-400"
+            className="text-5xl sm:text-6xl md:text-8xl font-black mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-br from-white via-cyan-200 to-blue-400"
             style={{
               textShadow: '0 0 20px rgba(56,189,248,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
               filter: 'drop-shadow(0 0 10px rgba(56,189,248,0.3))',
@@ -107,11 +107,16 @@ const HeroSection: React.FC = () => {
             }}
           >
             Solution of the <span className="text-yellow-300 font-bold">$1.2 Trillion</span> Advertising Industry. <br />
-            <div className="text-cyan-300 font-semibold flex flex-wrap items-center justify-center gap-2 mt-4">
+            <div className="text-cyan-300 font-semibold flex flex-col sm:flex-row flex-wrap items-center justify-center gap-1 sm:gap-2 mt-2 sm:mt-4">
               <span>Where Users</span>
               <span 
                 className="relative inline-block overflow-hidden align-middle"
-                style={{ minWidth: '200px', height: '1.4em', lineHeight: '1.4em' }}
+                style={{ 
+                  minWidth: 'auto', 
+                  maxWidth: '90vw',
+                  height: '1.4em', 
+                  lineHeight: '1.4em' 
+                }}
               >
                 <span
                   key={`user-${currentUserIndex}`}
@@ -128,11 +133,16 @@ const HeroSection: React.FC = () => {
                   {userActivities[currentUserIndex]}
                 </span>
               </span>
-              <span>|</span>
+              <span className="hidden sm:inline">|</span>
               <span>Advertisers</span>
               <span 
                 className="relative inline-block overflow-hidden align-middle"
-                style={{ minWidth: '280px', height: '1.4em', lineHeight: '1.4em' }}
+                style={{ 
+                  minWidth: 'auto', 
+                  maxWidth: '90vw',
+                  height: '1.4em', 
+                  lineHeight: '1.4em' 
+                }}
               >
                 <span
                   key={`advertiser-${currentAdvertiserIndex}`}
@@ -153,14 +163,14 @@ const HeroSection: React.FC = () => {
           </div>
           
           <div 
-            className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-fadeInUp"
+            className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-fadeInUp px-4 sm:px-0 max-w-xs sm:max-w-none mx-auto"
             style={{ animationDelay: '1s' }}
           >
             <a
               href="https://app.metasurfai.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-5 text-sm sm:text-base text-white font-bold rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 overflow-hidden transform hover:scale-105 transition-all duration-300"
+              className="group relative w-auto px-6 sm:px-10 py-3 sm:py-5 text-sm sm:text-base text-white font-bold rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 overflow-hidden transform hover:scale-105 transition-all duration-300"
               style={{
                 boxShadow: "0 0 25px rgba(56, 189, 248, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.1)"
               }}
@@ -175,7 +185,7 @@ const HeroSection: React.FC = () => {
               href="https://whitepaper.metasurfai.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-5 text-sm sm:text-base text-white font-semibold rounded-full bg-white/10 backdrop-blur-md border border-white/30 relative overflow-hidden transform hover:scale-105 transition-all duration-300"
+              className="group w-auto px-6 sm:px-10 py-3 sm:py-5 text-sm sm:text-base text-white font-semibold rounded-full bg-white/10 backdrop-blur-md border border-white/30 relative overflow-hidden transform hover:scale-105 transition-all duration-300"
               style={{
                 boxShadow: "0 0 20px rgba(255, 255, 255, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.05)"
               }}

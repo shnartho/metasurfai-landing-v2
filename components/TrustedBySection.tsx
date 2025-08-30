@@ -12,7 +12,7 @@ const CompanyLogo: React.FC<CompanyLogoProps> = ({ name, description, index }) =
     style={{ animationDelay: `${index * 0.15}s` }}
   >
     <div
-      className="relative p-8 rounded-2xl border overflow-hidden"
+      className="relative p-3 sm:p-6 md:p-8 rounded-2xl border overflow-hidden"
       style={{
         background: `
           linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%),
@@ -27,9 +27,9 @@ const CompanyLogo: React.FC<CompanyLogoProps> = ({ name, description, index }) =
       }}
     >
       {/* Company logo/name */}
-      <div className="text-center mb-4">
+      <div className="text-center mb-2 sm:mb-4">
         <div 
-          className="text-2xl font-black text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300"
+          className="text-lg sm:text-xl md:text-2xl font-black text-white mb-1 sm:mb-2 group-hover:text-cyan-300 transition-colors duration-300"
           style={{
             textShadow: '0 0 15px rgba(255,255,255,0.3)',
             fontFamily: 'Arial, sans-serif',
@@ -38,10 +38,10 @@ const CompanyLogo: React.FC<CompanyLogoProps> = ({ name, description, index }) =
         >
           {name}
         </div>
-        <div className="w-12 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full" />
+        <div className="w-10 sm:w-12 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full" />
       </div>
       
-      <p className="text-gray-400 text-sm text-center leading-relaxed">{description}</p>
+      <p className="text-gray-400 text-xs sm:text-sm text-center leading-relaxed">{description}</p>
       
       {/* Hover effect overlay */}
       <div
@@ -114,13 +114,13 @@ const TrustedBySection: React.FC = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Section header */}
-        <div className="text-center mb-12 animate-fadeInUp">
-          <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 mb-6">
-            <span className="text-emerald-300 font-semibold text-sm uppercase tracking-wide">Industry Leaders</span>
+        <div className="text-center mb-6 sm:mb-12 animate-fadeInUp">
+          <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 mb-4 sm:mb-6">
+            <span className="text-emerald-300 font-semibold text-xs sm:text-sm uppercase tracking-wide">Industry Leaders</span>
           </div>
           
           <h2 
-            className="text-4xl md:text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-emerald-200 to-cyan-400"
+            className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-emerald-200 to-cyan-400"
             style={{
               textShadow: '0 0 20px rgba(16,185,129,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
               filter: 'drop-shadow(0 0 10px rgba(16,185,129,0.3))',
@@ -133,7 +133,7 @@ const TrustedBySection: React.FC = () => {
         </div>
 
         {/* Companies grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 mb-6 sm:mb-12">
           {companies.map((company, index) => (
             <CompanyLogo 
               key={index}
