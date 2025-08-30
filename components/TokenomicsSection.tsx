@@ -38,14 +38,14 @@ const TokenomicsSection: React.FC = () => {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
-          className="text-center mb-12 animate-fadeInUp"
+          className="text-center mb-8 sm:mb-12 animate-fadeInUp"
         >
-          <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-rose-500/20 to-pink-500/20 border border-rose-400/30 mb-6">
-            <span className="text-rose-300 font-semibold text-sm uppercase tracking-wide">Token Economy</span>
+          <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-gradient-to-r from-rose-500/20 to-pink-500/20 border border-rose-400/30 mb-4 sm:mb-6">
+            <span className="text-rose-300 font-semibold text-xs sm:text-sm uppercase tracking-wide">Token Economy</span>
           </div>
           
           <h2 
-            className="text-4xl md:text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-rose-200 to-pink-400"
+            className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white via-rose-200 to-pink-400"
             style={{
               textShadow: '0 0 20px rgba(244,63,94,0.4), 4px 4px 12px rgba(0,0,0,0.8)',
               filter: 'drop-shadow(0 0 10px rgba(244,63,94,0.3))',
@@ -57,10 +57,10 @@ const TokenomicsSection: React.FC = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 overflow-hidden">
           {/* Animated 3D Diagram */}
           <div 
-            className="relative w-96 h-96 flex items-center justify-center animate-fadeInUp"
+            className="relative w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 flex items-center justify-center animate-fadeInUp"
             style={{ animationDelay: '0.1s' }}
           >
             {/* Outer rotating ring */}

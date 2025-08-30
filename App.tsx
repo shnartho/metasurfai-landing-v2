@@ -14,13 +14,19 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-[#01000B] text-gray-200 font-sans overflow-x-hidden relative">
+    <div className="bg-[#01000B] text-gray-200 font-sans overflow-x-hidden relative max-w-[100vw]">
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
           
           body {
             font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            max-width: 100vw;
+          }
+          
+          * {
+            box-sizing: border-box;
           }
           
           @keyframes rotate-slow {

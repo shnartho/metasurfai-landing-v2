@@ -78,14 +78,14 @@ const InvestmentCTASection: React.FC = () => {
         </div>
 
         {/* CTA buttons */}
-        <div className="flex flex-col items-center justify-center gap-8 mb-12 animate-fadeInUp" style={{ animationDelay: '0.9s' }}>
+        <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 mb-8 sm:mb-12 animate-fadeInUp" style={{ animationDelay: '0.9s' }}>
           {/* Main action buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <a
               href="https://app.metasurfai.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative w-full sm:w-auto px-12 py-6 text-xl font-bold rounded-full bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white overflow-hidden transform hover:scale-110 transition-all duration-300"
+              className="group relative w-full sm:w-auto px-6 sm:px-12 py-3 sm:py-6 text-base sm:text-xl font-bold rounded-full bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white overflow-hidden transform hover:scale-110 transition-all duration-300"
               style={{
                 boxShadow: "0 0 40px rgba(251,191,36,0.8), inset 0 0 30px rgba(255,255,255,0.2)"
               }}
@@ -98,7 +98,7 @@ const InvestmentCTASection: React.FC = () => {
               href="https://whitepaper.metasurfai.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full sm:w-auto px-12 py-6 text-xl font-semibold rounded-full bg-white/10 backdrop-blur-md border-2 border-white/40 text-white relative overflow-hidden transform hover:scale-110 transition-all duration-300"
+              className="group w-full sm:w-auto px-6 sm:px-12 py-3 sm:py-6 text-base sm:text-xl font-semibold rounded-full bg-white/10 backdrop-blur-md border-2 border-white/40 text-white relative overflow-hidden transform hover:scale-110 transition-all duration-300"
               style={{
                 boxShadow: "0 0 30px rgba(255,255,255,0.2)"
               }}

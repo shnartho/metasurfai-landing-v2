@@ -100,7 +100,7 @@ const HeroSection: React.FC = () => {
           </h1>
           
           <div 
-            className="mt-8 text-lg md:text-2xl text-gray-300 max-w-4xl mx-auto animate-fadeInUp"
+            className="mt-4 sm:mt-8 text-base sm:text-lg md:text-2xl text-gray-300 max-w-4xl mx-auto animate-fadeInUp"
             style={{
               textShadow: '0 0 8px rgba(255, 255, 255, 0.15), 2px 2px 4px rgba(0, 0, 0, 0.8)',
               animationDelay: '0.5s'
@@ -153,14 +153,14 @@ const HeroSection: React.FC = () => {
           </div>
           
           <div 
-            className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 animate-fadeInUp"
+            className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-fadeInUp"
             style={{ animationDelay: '1s' }}
           >
             <a
               href="https://app.metasurfai.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative w-full sm:w-auto px-10 py-5 text-white font-bold rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 overflow-hidden transform hover:scale-105 transition-all duration-300"
+              className="group relative w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-5 text-sm sm:text-base text-white font-bold rounded-full bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 overflow-hidden transform hover:scale-105 transition-all duration-300"
               style={{
                 boxShadow: "0 0 25px rgba(56, 189, 248, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.1)"
               }}
@@ -175,7 +175,7 @@ const HeroSection: React.FC = () => {
               href="https://whitepaper.metasurfai.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group w-full sm:w-auto px-10 py-5 text-white font-semibold rounded-full bg-white/10 backdrop-blur-md border border-white/30 relative overflow-hidden transform hover:scale-105 transition-all duration-300"
+              className="group w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-5 text-sm sm:text-base text-white font-semibold rounded-full bg-white/10 backdrop-blur-md border border-white/30 relative overflow-hidden transform hover:scale-105 transition-all duration-300"
               style={{
                 boxShadow: "0 0 20px rgba(255, 255, 255, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.05)"
               }}

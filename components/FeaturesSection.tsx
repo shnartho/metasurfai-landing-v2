@@ -11,7 +11,7 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, index }) => (
   <div
-    className="relative p-8 bg-black/30 backdrop-blur-xl rounded-3xl border border-white/10 overflow-hidden group cursor-pointer transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 animate-fadeInUp"
+    className="relative p-4 sm:p-6 md:p-8 bg-black/30 backdrop-blur-xl rounded-3xl border border-white/10 overflow-hidden group cursor-pointer transform hover:scale-105 hover:-translate-y-2 transition-all duration-500 animate-fadeInUp"
     style={{
       background: `
         linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%),
@@ -60,13 +60,13 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, ind
       </div>
       
           <h3 
-            className="text-xl font-bold text-white mb-2"
+            className="text-lg sm:text-xl font-bold text-white mb-2"
             style={{
               textShadow: '0 0 5px rgba(255,255,255,0.15), 2px 2px 4px rgba(0,0,0,0.8)'
             }}
           >
             {title}
-          </h3>      <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
+          </h3>      <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{description}</p>
     </div>
 
     {/* Corner highlight */}
@@ -107,10 +107,10 @@ const FeaturesSection: React.FC = () => {
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
-          className="text-center mb-12 animate-fadeInUp"
+          className="text-center mb-6 sm:mb-12 animate-fadeInUp"
         >
           <h2 
-            className="text-4xl md:text-5xl font-extrabold mb-4 animate-titleGlow text-sky-400"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 animate-titleGlow text-sky-400"
             style={{
               color: '#38bdf8',
               animation: 'titleFloat 6s ease-in-out infinite, titleGlow 3s ease-in-out infinite, float 8s ease-in-out infinite',
@@ -129,7 +129,7 @@ const FeaturesSection: React.FC = () => {
             Platform Features
           </h2>
           <p 
-            className="mt-3 text-lg text-gray-400 max-w-2xl mx-auto"
+            className="mt-2 sm:mt-3 text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto"
             style={{
               textShadow: '0 0 10px rgba(255,255,255,0.2)'
             }}
