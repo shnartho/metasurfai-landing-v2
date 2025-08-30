@@ -1,8 +1,50 @@
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { Crypto3DScene } from './icons/CryptoIcons';
 
 const HeroSection: React.FC = () => {
+  const userActivities = [
+    "Earn Rewards",
+    "Trade Crypto",
+    "Create Ads",
+    "Re-Invest",
+    "Be Advertisers",
+    "Join Liquidity Pools",
+    "Mine Tokens"
+  ];
+
+  const advertiserActivities = [
+    "Create Mobile Notifications Ads",
+    "Launch Telegram Ads",
+    "Advertise in 3rd Party Games",
+    "Promote Websites",
+    "Rent Digital Billboards",
+    "Place Songs as Ads",
+    "Place Ads in Live Streams",
+    "Advertise in XR/VR/AR",
+    "Promote in Local Areas",
+    "Create Playable Game Ads",
+    "Target Global Audiences"
+  ];
+
+  const [currentUserIndex, setCurrentUserIndex] = useState(0);
+  const [currentAdvertiserIndex, setCurrentAdvertiserIndex] = useState(0);
+
+  useEffect(() => {
+    const userInterval = setInterval(() => {
+      setCurrentUserIndex((prev) => (prev + 1) % userActivities.length);
+    }, 2500);
+
+    const advertiserInterval = setInterval(() => {
+      setCurrentAdvertiserIndex((prev) => (prev + 1) % advertiserActivities.length);
+    }, 3000);
+
+    return () => {
+      clearInterval(userInterval);
+      clearInterval(advertiserInterval);
+    };
+  }, [userActivities.length, advertiserActivities.length]);
+
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
@@ -65,7 +107,49 @@ const HeroSection: React.FC = () => {
             }}
           >
             Solution of the <span className="text-yellow-300 font-bold">$1.2 Trillion</span> Advertising Industry. <br />
-            <span className="text-cyan-300 font-semibold">Where Users Earn, Advertisers Win, and Everyone Profits.</span>
+            <div className="text-cyan-300 font-semibold flex flex-wrap items-center justify-center gap-2 mt-4">
+              <span>Where Users</span>
+              <span 
+                className="relative inline-block overflow-hidden align-middle"
+                style={{ minWidth: '200px', height: '1.4em', lineHeight: '1.4em' }}
+              >
+                <span
+                  key={`user-${currentUserIndex}`}
+                  className="block animate-slideUpIn"
+                  style={{
+                    background: 'linear-gradient(45deg, #06b6d4, #8b5cf6)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.3))',
+                    animation: 'slideUpIn 0.6s ease-out forwards'
+                  }}
+                >
+                  {userActivities[currentUserIndex]}
+                </span>
+              </span>
+              <span>|</span>
+              <span>Advertisers</span>
+              <span 
+                className="relative inline-block overflow-hidden align-middle"
+                style={{ minWidth: '280px', height: '1.4em', lineHeight: '1.4em' }}
+              >
+                <span
+                  key={`advertiser-${currentAdvertiserIndex}`}
+                  className="block animate-slideUpIn"
+                  style={{
+                    background: 'linear-gradient(45deg, #10b981, #f59e0b)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    filter: 'drop-shadow(0 0 8px rgba(16, 185, 129, 0.3))',
+                    animation: 'slideUpIn 0.6s ease-out forwards'
+                  }}
+                >
+                  {advertiserActivities[currentAdvertiserIndex]}
+                </span>
+              </span>
+            </div>
           </div>
           
           <div 
@@ -120,6 +204,17 @@ const HeroSection: React.FC = () => {
       </section>
       
       <style>{`
+        @keyframes slideUpIn {
+          from {
+            transform: translateY(100%);
+            opacity: 0;
+          }
+          to {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+        
         @keyframes float {
           0%, 100% { transform: translateY(0px) scale(1); }
           50% { transform: translateY(-20px) scale(1.1); }
