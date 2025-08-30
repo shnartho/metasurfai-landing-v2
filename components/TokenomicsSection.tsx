@@ -57,10 +57,10 @@ const TokenomicsSection: React.FC = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 overflow-hidden mt-8 sm:mt-0">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-16 overflow-hidden mt-8 sm:mt-0">
           {/* Animated 3D Diagram */}
           <div 
-            className="relative w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 flex items-center justify-center animate-fadeInUp mt-8 sm:mt-16 lg:mt-0 px-4"
+            className="relative w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 flex items-center justify-center animate-fadeInUp mt-8 sm:mt-16 lg:mt-0 px-4 mb-8 lg:mb-0"
             style={{ animationDelay: '0.1s' }}
           >
             {/* Outer rotating ring */}
@@ -175,7 +175,7 @@ const TokenomicsSection: React.FC = () => {
 
           {/* Enhanced Infographic */}
           <div 
-            className="w-full max-w-md p-8 bg-white/10 backdrop-blur-lg rounded-3xl border border-white/20 space-y-8 hover:scale-102 transition-transform duration-300 animate-fadeInUp"
+            className="w-full max-w-md p-8 bg-white/10 backdrop-blur-lg rounded-3xl border border-white/20 space-y-8 hover:scale-102 transition-transform duration-300 animate-fadeInUp mt-12 lg:mt-0"
             style={{
               background: `
                 linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%),
