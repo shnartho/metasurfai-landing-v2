@@ -4,27 +4,37 @@ import { Crypto3DScene } from './icons/CryptoIcons';
 
 const HeroSection: React.FC = () => {
   const userActivities = [
-    "Earn Rewards",
-    "Trade Crypto",
-    "Create Ads",
-    "Re-Invest",
-    "Be Advertisers",
-    "Join Liquidity Pools",
-    "Mine Tokens"
+    "Watch Engaging Ads & Earn Instant Rewards",
+    "Become Advertisers & Create Your Own Campaigns",
+    "Join Liquidity Pools & Earn Passive Income",
+    "Trade MSAI Tokens on Decentralized Exchanges",
+    "Withdraw Your Earnings Anytime Without Restrictions",
+    "Convert All Rewards to USD or Crypto Instantly",
+    "Do Online Shopping Using Your Earned Rewards",
+    "Play Interactive Games & Earn While Having Fun",
+    "Listen to Music & Podcasts While Earning Tokens",
+    "Watch Live Streams & Entertainment Content for Rewards",
+    "Browse Websites & Get Paid for Your Attention",
+    "Explore Virtual Metaverse Worlds & Earn Digital Assets",
+    "Use MSAI Tokens to Create & Launch Your Own Ad Campaigns"
   ];
 
   const advertiserActivities = [
-    "Create Mobile Notifications Ads",
-    "Launch Telegram Ads",
-    "Advertise in 3rd Party Games",
-    "Promote Websites",
-    "Rent Digital Billboards",
-    "Place Songs as Ads",
-    "Place Ads in Live Streams",
-    "Advertise in XR/VR/AR",
-    "Promote in Local Areas",
-    "Create Playable Game Ads",
-    "Target Global Audiences"
+    "Send Targeted Mobile Push Notification Advertisements",
+    "Advertise Directly Inside 3rd Party Mobile Games",
+    "Display Ads on Digital Billboards & Public Screens",
+    "Integrate Ads into Playable Songs & Audio Content",
+    "Advertise During Live Streaming & Video Content",
+    "Create Immersive Ads for XR/VR/AR Virtual Experiences",
+    "Develop Interactive Playable Game Advertisement Campaigns",
+    "Advertise Any Product or Service Anywhere Digitally",
+    "Promote Crypto Projects, NFTs, Events & Digital Assets",
+    "Drive Traffic & Conversions for Any Website or Platform",
+    "Launch Advertising Campaigns in Virtual Metaverse Worlds",
+    "Let AI Agents Automatically Handle Your Ad Campaigns",
+    "Deploy AI-Powered Agents for Automated Telemarketing",
+    "Manage All Your Ads Campaigns from Single Dashboard",
+    "Get Comprehensive Real-Time Analytics for All Your Ads"
   ];
 
   const [currentUserIndex, setCurrentUserIndex] = useState(0);
@@ -107,58 +117,61 @@ const HeroSection: React.FC = () => {
             }}
           >
             Solution of the <span className="text-yellow-300 font-bold">$1.2 Trillion</span> Advertising Industry. <br />
-            <div className="text-cyan-300 font-semibold flex flex-col sm:flex-row flex-wrap items-center justify-center gap-1 sm:gap-2 mt-2 sm:mt-4">
-              <span>Where Users</span>
-              <span 
-                className="relative inline-block overflow-hidden align-middle"
-                style={{ 
-                  minWidth: 'auto', 
-                  maxWidth: '90vw',
-                  height: '1.4em', 
-                  lineHeight: '1.4em' 
-                }}
-              >
-                <span
-                  key={`user-${currentUserIndex}`}
-                  className="block animate-slideUpIn"
-                  style={{
-                    background: 'linear-gradient(45deg, #06b6d4, #8b5cf6)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.3))',
-                    animation: 'slideUpIn 0.6s ease-out forwards'
+            <div className="text-cyan-300 font-semibold flex flex-col items-center justify-center gap-2 mt-2 sm:mt-4">
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-1 sm:gap-2">
+                <span>Where Users</span>
+                <span 
+                  className="relative inline-block overflow-hidden align-middle"
+                  style={{ 
+                    minWidth: 'auto', 
+                    maxWidth: '90vw',
+                    height: '1.4em', 
+                    lineHeight: '1.4em' 
                   }}
                 >
-                  {userActivities[currentUserIndex]}
+                  <span
+                    key={`user-${currentUserIndex}`}
+                    className="block animate-slideUpIn"
+                    style={{
+                      background: 'linear-gradient(45deg, #06b6d4, #8b5cf6)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.3))',
+                      animation: 'slideUpIn 0.6s ease-out forwards'
+                    }}
+                  >
+                    {userActivities[currentUserIndex]}
+                  </span>
                 </span>
-              </span>
-              <span className="hidden sm:inline">|</span>
-              <span>Advertisers</span>
-              <span 
-                className="relative inline-block overflow-hidden align-middle"
-                style={{ 
-                  minWidth: 'auto', 
-                  maxWidth: '90vw',
-                  height: '1.4em', 
-                  lineHeight: '1.4em' 
-                }}
-              >
-                <span
-                  key={`advertiser-${currentAdvertiserIndex}`}
-                  className="block animate-slideUpIn"
-                  style={{
-                    background: 'linear-gradient(45deg, #10b981, #f59e0b)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                    filter: 'drop-shadow(0 0 8px rgba(16, 185, 129, 0.3))',
-                    animation: 'slideUpIn 0.6s ease-out forwards'
+              </div>
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-1 sm:gap-2">
+                <span>Where Advertisers</span>
+                <span 
+                  className="relative inline-block overflow-hidden align-middle"
+                  style={{ 
+                    minWidth: 'auto', 
+                    maxWidth: '90vw',
+                    height: '1.4em', 
+                    lineHeight: '1.4em' 
                   }}
                 >
-                  {advertiserActivities[currentAdvertiserIndex]}
+                  <span
+                    key={`advertiser-${currentAdvertiserIndex}`}
+                    className="block animate-slideUpIn"
+                    style={{
+                      background: 'linear-gradient(45deg, #10b981, #f59e0b)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      filter: 'drop-shadow(0 0 8px rgba(16, 185, 129, 0.3))',
+                      animation: 'slideUpIn 0.6s ease-out forwards'
+                    }}
+                  >
+                    {advertiserActivities[currentAdvertiserIndex]}
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
           

@@ -76,18 +76,20 @@ const Header: React.FC = () => {
         >
           {/* Logo with 3D effect */}
           <div 
-            className="text-2xl font-bold tracking-wider text-white cursor-pointer hover:scale-105 transform transition-transform duration-300"
+            className="text-2xl font-bold tracking-wider cursor-pointer hover:scale-105 transform transition-transform duration-300"
             style={{
-              textShadow: `
-                0 0 20px rgba(56, 189, 248, 0.8),
-                0 0 40px rgba(168, 85, 247, 0.4),
-                2px 2px 0px rgba(0, 0, 0, 0.8),
-                4px 4px 8px rgba(0, 0, 0, 0.6)
-              `,
               transform: 'perspective(500px) rotateX(5deg)',
             }}
           >
-            MetaSurf<span className="text-sky-400">AI</span>
+            <span 
+              className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-blue-500"
+              style={{
+                textShadow: '0 0 10px rgba(236, 72, 153, 0.5), 0 0 20px rgba(59, 130, 246, 0.3)',
+                filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3))'
+              }}
+            >
+              MetaSurfAI
+            </span>
           </div>
 
 
