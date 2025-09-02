@@ -17,6 +17,9 @@ const App: React.FC = () => {
     <div className="bg-[#01000B] text-gray-200 font-sans overflow-x-hidden relative max-w-[100vw]">
       <style>
         {`
+          #roadmap {
+            scroll-margin-top: 88px;
+          }
           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
           
           body {
