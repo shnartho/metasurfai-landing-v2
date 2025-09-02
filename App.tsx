@@ -1,5 +1,5 @@
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import IndustryStatsSection from './components/IndustryStatsSection';
@@ -13,6 +13,20 @@ import InvestmentCTASection from './components/InvestmentCTASection';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
+  useEffect(() => {
+    const scrollToHash = () => {
+      if (window.location.hash) {
+        const id = window.location.hash.replace('#', '');
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+    scrollToHash();
+    window.addEventListener('hashchange', scrollToHash);
+    return () => window.removeEventListener('hashchange', scrollToHash);
+  }, []);
   return (
     <div className="bg-[#01000B] text-gray-200 font-sans overflow-x-hidden relative max-w-[100vw]">
       <style>
